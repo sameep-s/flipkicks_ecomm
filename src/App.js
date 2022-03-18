@@ -1,10 +1,10 @@
 import "./App.css";
-import logo from "./logo.png";
 
 function App() {
   return (
     <div className="App">
-      <h1>FlipKicks react</h1>
+      <h1>FlipKicks reactJS</h1>
+      <h2>hope it works</h2>
     </div>
   );
 }
