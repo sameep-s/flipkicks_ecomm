@@ -1,0 +1,129 @@
+.btn-sq {
+  width: 100%;
+  height: 5rem;
+  font-size: 2rem;
+  font-family: var(--font-bold);
+  cursor: pointer;
+  outline: transparent;
+  transition: 500ms;
+  border: 0.1rem solid var(--night);
+}
+
+.btn-dark {
+  background-color: var(--night);
+  color: var(--day);
+}
+
+.btn-dark:hover {
+  color: var(--night);
+  background-color: var(--day);
+}
+
+.btn-light {
+  background-color: var(--day);
+  color: var(--night);
+}
+
+.btn-light:hover {
+  color: var(--day);
+  background-color: var(--night);
+}
+
+/* ---------------------------------------Homepage */
+
+/* ---------------------------------------Product listing */
+.pList-card-btn {
+  padding: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--night);
+  background-color: var(--day);
+  border: 0.1rem solid var(--night);
+  font-family: var(--font-bold);
+  transition: 360ms;
+}
+
+.pList-card-btn:hover {
+  background-color: var(--night);
+  color: var(--day);
+}
+
+/* ------------------------------button cart */
+
+.btn-cart-qty {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.4rem;
+  font-family: var(--font-bold);
+  height: 4rem;
+  width: 4rem;
+  margin: 0 1rem;
+  background-color: var(--day);
+  border-radius: 50%;
+  border: 0.1rem solid var(--darker);
+}
+
+/* homepage text wrapper */
+.btn-text {
+  border-radius: 1rem;
+  width: 15rem;
+  height: 4rem;
+}
+
+.btn-overlay {
+  background-color: none;
+  display: inline-flex;
+  background-color: white;
+  border: none;
+  border-radius: 3rem;
+  font-size: 3.5rem;
+  font-family: var(--font-bold);
+  transition: 360ms;
+}
+
+.btn-overlay:hover {
+  background-color: var(--night);
+  color: white;
+}
+
+/* ---------------------------------media quesries */
+
+/* for medium sized screens */
+@media screen and (max-width: 1025px) {
+  .btn-overlay {
+    font-size: 2.6rem;
+  }
+}
+
+/* for mobiles */
+@media screen and (max-width: 450px) {
+  .btn-cart-qty {
+    font-size: 2.3rem;
+    height: 2rem;
+    width: 2rem;
+    margin: 0 0.5rem;
+  }
+
+  .btn-overlay {
+    border-radius: 3rem;
+    font-size: 2.2rem;
+    font-family: var(--font-bold);
+    transition: 360ms;
+  }
+
+  .btn-sq {
+    height: 4rem;
+    font-size: 2rem;
+    font-family: var(--font-bold);
+    border: 0.1rem solid var(--night);
+  }
+
+  .btn-cart-qty {
+    font-size: 2rem;
+    height: 2rem;
+    width: 2rem;
+  }
+}

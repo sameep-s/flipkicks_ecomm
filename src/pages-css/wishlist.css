@@ -1,0 +1,46 @@
+.main-container-wishlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wishlist-heading {
+  font-size: 4rem;
+  font-family: var(--font-bold);
+  border-bottom: 0.2rem solid black;
+  width: 80%;
+  text-align: center;
+}
+
+.content-wrapper-wishlist {
+  width: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+}
+
+/* --------------------------------------------- MEDIA */
+
+@media screen and (max-width: 480px) {
+  .main-container-wishlist {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-wrapper-wishlist {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pList-card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

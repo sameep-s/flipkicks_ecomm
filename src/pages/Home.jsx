@@ -1,4 +1,5 @@
 import React from 'react';
+import '../pages-css/main.css';
 
 const Home = () => {
     return (
@@ -39,7 +40,7 @@ const Home = () => {
                         </div>
                         <div class="form-utility-2 mt-2">
                             By logging in, you agree to our
-                            <a href="" class="form-link">Privary Policy</a> and
+                            <a href="" class="form-link"> Privary Policy</a> and
                             <a href="" class="form-link"> Terms of service.</a>
                         </div>
                     </div>
