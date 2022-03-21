@@ -23,6 +23,12 @@
   font-size: 4rem;
 }
 
+.navbar--container-strt .icon__hamburger {
+  margin-right: 1rem;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
 .brand-name {
   font-weight: bolder;
   cursor: pointer;
@@ -105,6 +111,10 @@
     font-size: 2.5rem;
   }
 
+  .navbar--container-strt .icon__hamburger {
+    font-size: 3rem;
+  }
+
   .btn-search-nav > div {
     color: var(--night);
     font-size: 1.6rem;
@@ -127,11 +137,11 @@
 
 @media screen and (max-width: 450px) {
   .navbar--container-middle {
-    width: 10%;
-    background-color: var(--day);
-    display: inline-flex;
-    align-items: center;
-    border-radius: 0.4rem;
+    display: none;
+  }
+
+  .brand-name {
+    display: none;
   }
 
   .input-dark {
@@ -147,9 +157,5 @@
     font-size: 2rem;
     border: none;
     color: var(--day);
-  }
-
-  .navbar--container-middle {
-    background-color: var(--night);
   }
 }
