@@ -12,6 +12,12 @@
   width: 90%;
 }
 
+.nav__icon_magnifying {
+  font-size: 2rem;
+  border: none;
+  margin: 0 0.5rem;
+}
+
 .navbar--container-strt {
   width: 30%;
   font-size: 4rem;
@@ -46,9 +52,9 @@
   font-size: 2rem;
   padding: 0.5rem;
   transition: 360ms;
-  border-radius: 0.5rem;
   outline: transparent;
   border: none;
+  border-left: 0.1rem solid var(--dark);
 }
 
 .btn-nav {
