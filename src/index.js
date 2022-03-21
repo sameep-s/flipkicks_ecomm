@@ -3,8 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 
-import ProductList from './pages/ProductList';
-
+import Wishlist from './pages/Wishlist';
 
 // import { makeServer } from "./server";
 // import App from "./App";
@@ -15,7 +14,7 @@ import ProductList from './pages/ProductList';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductList />
+    <Wishlist />
   </React.StrictMode>,
   document.getElementById("root")
 );
