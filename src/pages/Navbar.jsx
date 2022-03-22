@@ -9,7 +9,6 @@ const Navbar = () => {
             <nav class="navbar pos-stick flex jc-center a-item-center">
                 <div class="nav-inner flex a-item-center jc-space-btw">
                     <div class="navbar--container-strt flex a-item-center">
-                        <FontAwesomeIcon icon={faBars} className="icon__hamburger"></FontAwesomeIcon>
                         <a href="../index.html">
                             <div class="brand-name">FlipKicks</div>
                         </a>
