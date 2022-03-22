@@ -25,6 +25,11 @@ body {
   overflow-x: scroll;
 }
 
+.card-cart-container {
+  height: 50rem;
+  overflow-y: scroll;
+}
+
 .cart-product-wrapper {
   overflow-y: scroll;
   height: 30rem;
@@ -95,7 +100,7 @@ body {
   font-weight: bold;
   width: 4rem;
   height: 3rem;
-  padding-left: 1.4rem;
+  padding-left: 0.5rem;
   outline: none;
 }
 
@@ -200,7 +205,6 @@ body {
   .cart-product-wrapper {
     overflow-y: scroll;
     height: 30rem;
-    width: 80%;
   }
 
   .cart-product-image > img {

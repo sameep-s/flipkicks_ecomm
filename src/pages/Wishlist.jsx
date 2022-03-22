@@ -16,6 +16,8 @@ function Wishlist() {
                     <CardProduct />
                     <CardProduct />
                     <CardProduct />
+                    <CardProduct />
+                    <CardProduct />
                 </div>
                 {/* <footer class="home-footer">CHOOSE YOUR KICKS @ FlipKicks</footer>  */}
             </main>

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 
-import Wishlist from './pages/Wishlist';
+import Home from './pages/Home';
 
 // import { makeServer } from "./server";
 // import App from "./App";
@@ -14,7 +14,7 @@ import Wishlist from './pages/Wishlist';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Wishlist />
+    <Home />
   </React.StrictMode>,
   document.getElementById("root")
 );
