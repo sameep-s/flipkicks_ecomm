@@ -1,6 +1,5 @@
 import React from 'react';
 import '../pages-css/main.css';
-
 import Navbar from "./Navbar";
 import BannerHome from './BannerHome';
 import BannerHomeHalf from './BannerHomeHalf';
