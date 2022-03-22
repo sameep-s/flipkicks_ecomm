@@ -8,9 +8,9 @@ function Cart() {
         <>
             <Navbar />
 
-            <main class="main-container-cart">
-                <div class="cart-heading">My Cart(2)</div>
-                <div class="content-wrapper-cart">
+            <main className="main-container-cart">
+                <div className="cart-heading">My Cart(2)</div>
+                <div className="content-wrapper-cart">
                     {/* <!-- container 1 --> */}
                     <div className="card-cart-container">
                         <CardCart />
@@ -20,33 +20,33 @@ function Cart() {
 
 
                     {/* <!-- container 2 --> */}
-                    <div class="cart-order-summary">
-                        <div class="card-summary-heading">Price Details</div>
+                    <div className="cart-order-summary">
+                        <div className="card-summary-heading">Price Details</div>
                         <hr />
-                        <div class="detail-container">
-                            <div class="card-detail-inner">
-                                <div class="order-temp">Price(2 Items)</div>
-                                <div class="order-value">$6000</div>
+                        <div className="detail-container">
+                            <div className="card-detail-inner">
+                                <div className="order-temp">Price(2 Items)</div>
+                                <div className="order-value">$6000</div>
                             </div>
-                            <div class="card-detail-inner">
-                                <div class="order-temp">Discount</div>
-                                <div class="order-value">-$1999</div>
+                            <div className="card-detail-inner">
+                                <div className="order-temp">Discount</div>
+                                <div className="order-value">-$1999</div>
                             </div>
-                            <div class="card-detail-inner">
-                                <div class="order-temp">Delivery Charges</div>
-                                <div class="order-value">$10</div>
+                            <div className="card-detail-inner">
+                                <div className="order-temp">Delivery Charges</div>
+                                <div className="order-value">$10</div>
                             </div>
                             <hr />
-                            <div class="card-detail-inner">
-                                <div class="order-total-temp">TOTAL AMOUNT</div>
-                                <div class="order-total-value">$5000</div>
+                            <div className="card-detail-inner">
+                                <div className="order-total-temp">TOTAL AMOUNT</div>
+                                <div className="order-total-value">$5000</div>
                             </div>
 
-                            <button class="btn-sq btn-dark">PLACE ORDER</button>
+                            <button className="btn-sq btn-dark">PLACE ORDER</button>
                         </div>
                     </div>
                 </div>
-                {/* <footer class="home-footer">CHOOSE YOUR KICKS @ FlipKicks</footer>  */}
+                {/* <footer className="home-footer">CHOOSE YOUR KICKS @ FlipKicks</footer>  */}
             </main>
         </>
     )

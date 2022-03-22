@@ -9,9 +9,9 @@ function Wishlist() {
         <>
             <Navbar />
 
-            <main class="main-container-wishlist">
-                <span class="wishlist-heading mt-4">My Wishlist(2)</span>
-                <div class="content-wrapper-wishlist mt-4">
+            <main className="main-container-wishlist">
+                <span className="wishlist-heading mt-4">My Wishlist(2)</span>
+                <div className="content-wrapper-wishlist mt-4">
                     <CardProduct />
                     <CardProduct />
                     <CardProduct />
@@ -19,7 +19,7 @@ function Wishlist() {
                     <CardProduct />
                     <CardProduct />
                 </div>
-                {/* <footer class="home-footer">CHOOSE YOUR KICKS @ FlipKicks</footer>  */}
+                {/* <footer className="home-footer">CHOOSE YOUR KICKS @ FlipKicks</footer>  */}
             </main>
         </>
     )

@@ -5,31 +5,31 @@ const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
     return (
         <>
 
-            <div class="item-container-full mb-4">
-                <div class="heading-full">{heading}</div>
-                <div class="content-full">
+            <div className="item-container-full mb-4">
+                <div className="heading-full">{heading}</div>
+                <div className="content-full">
                     <a href={link}>
                         <img
                             src={img}
                             alt="image"
-                            class="img-full skeleton-img"
+                            className="img-full skeleton-img"
                             loading="lazy"
                         />
                     </a>
                 </div>
 
                 <div
-                    class="text-container mt-4 flex flex-col jc-center a-item-center"
+                    className="text-container mt-4 flex flex-col jc-center a-item-center"
                 >
-                    <div class="text-container-heading flex flex-col jc-center a-item-center">
-                        <div class="text-heading-sub">
+                    <div className="text-container-heading flex flex-col jc-center a-item-center">
+                        <div className="text-heading-sub">
                             {msg}
                         </div>
-                        <div class="text-heading-main">{subHeading}</div>
+                        <div className="text-heading-main">{subHeading}</div>
                     </div>
                     <a href={link}>
                         <button
-                            class="btn-sq btn-dark btn-text mt-2 jc-center a-item-center"
+                            className="btn-sq btn-dark btn-text mt-2 jc-center a-item-center"
                         >
                             Shop All
                         </button>

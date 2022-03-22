@@ -5,33 +5,33 @@ const Filters = () => {
     return (
         <>
             {/* <!-- sidebar --> */}
-            <aside class="aside-pList-wrap mb-1">
-                <div class="aside-pList-content">
-                    <div class="aside-pList-heading">Filters</div>
-                    <div class="pList-content-container">
-                        <div class="pList-container-heading">Sort By</div>
+            <aside className="aside-pList-wrap mb-1">
+                <div className="aside-pList-content">
+                    <div className="aside-pList-heading">Filters</div>
+                    <div className="pList-content-container">
+                        <div className="pList-container-heading">Sort By</div>
                         <hr />
 
-                        <div class="pList-container-body">
-                            <div class="pList-item-container mt-1">
+                        <div className="pList-container-body">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="radio"
                                     name="pList-radio"
                                     id="pList-radio-high"
-                                    class="pList-radio"
+                                    className="pList-radio"
                                 />
-                                <label for="pList-radio-high" class="pList-label">
+                                <label for="pList-radio-high" className="pList-label">
                                     Price Low To High</label
                                 >
                             </div>
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="radio"
                                     name="pList-radio"
                                     id="pList-radio-high"
-                                    class="pList-radio"
+                                    className="pList-radio"
                                 />
-                                <label for="pList-radio-high" class="pList-label">
+                                <label for="pList-radio-high" className="pList-label">
                                     Price Low To High</label
                                 >
                             </div>
@@ -39,19 +39,19 @@ const Filters = () => {
                     </div>
 
                     {/* <!-- container 2 --> */}
-                    <div class="pList-content-container">
-                        <div class="pList-container-heading">Price</div>
+                    <div className="pList-content-container">
+                        <div className="pList-container-heading">Price</div>
                         <hr />
 
-                        <div class="pList-container-body">
-                            <div class="range-upper txt-gray">
-                                <div class="upper-left">Min</div>
-                                <upper class="upper-right">Max</upper>
+                        <div className="pList-container-body">
+                            <div className="range-upper txt-gray">
+                                <div className="upper-left">Min</div>
+                                <upper className="upper-right">Max</upper>
                             </div>
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="range"
-                                    class="price-slider mb-1"
+                                    className="price-slider mb-1"
                                     id="range-price"
                                     min="500"
                                     max="50000"
@@ -59,24 +59,24 @@ const Filters = () => {
 
                                 <label for="range-price"> </label>
                             </div>
-                            <div class="range-under">
-                                <div class="under-left">
+                            <div className="range-under">
+                                <div className="under-left">
                                     <input
                                         type="text"
                                         placeholder="500"
                                         name=""
                                         id=""
-                                        class="input-l-under"
+                                        className="input-l-under"
                                     />
                                 </div>
 
-                                <div class="under-right">
+                                <div className="under-right">
                                     <input
                                         type="text"
                                         placeholder="50000"
                                         name=""
                                         id=""
-                                        class="input-r-under"
+                                        className="input-r-under"
                                     />
                                 </div>
                             </div>
@@ -84,71 +84,71 @@ const Filters = () => {
                     </div>
 
                     {/* <!-- container 3 --> */}
-                    <div class="pList-content-container">
-                        <div class="pList-container-heading">Brand</div>
+                    <div className="pList-content-container">
+                        <div className="pList-container-heading">Brand</div>
                         <hr />
 
-                        <div class="pList-container-body">
-                            <div class="pList-item-container mt-1">
+                        <div className="pList-container-body">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label">
+                                <label for="pList-checkbox" className="pList-label">
                                     Jordan</label
                                 >
                             </div>
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label">
+                                <label for="pList-checkbox" className="pList-label">
                                     Nike Sportswear</label
                                 >
                             </div>
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label">
+                                <label for="pList-checkbox" className="pList-label">
                                     NikeLab</label
                                 >
                             </div>
 
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label">
+                                <label for="pList-checkbox" className="pList-label">
                                     Jordan X Off-White</label
                                 >
                             </div>
 
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label">
+                                <label for="pList-checkbox" className="pList-label">
                                     Nike Pro</label
                                 >
                             </div>
 
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label">
+                                <label for="pList-checkbox" className="pList-label">
                                     Nike</label
                                 >
                             </div>
@@ -156,67 +156,67 @@ const Filters = () => {
                     </div>
 
                     {/* <!-- container 4 --> */}
-                    <div class="pList-content-container">
-                        <div class="pList-container-heading">Size</div>
+                    <div className="pList-content-container">
+                        <div className="pList-container-heading">Size</div>
                         <hr />
 
-                        <div class="pList-container-body">
-                            <div class="pList-item-container mt-1">
+                        <div className="pList-container-body">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label"> 4.5</label>
+                                <label for="pList-checkbox" className="pList-label"> 4.5</label>
                             </div>
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label"> 5</label>
+                                <label for="pList-checkbox" className="pList-label"> 5</label>
                             </div>
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label"> 6</label>
-                            </div>
-
-                            <div class="pList-item-container mt-1">
-                                <input
-                                    type="checkbox"
-                                    id="pList-checkbox"
-                                    class="pList-checkbox"
-                                />
-                                <label for="pList-checkbox" class="pList-label"> 7</label>
+                                <label for="pList-checkbox" className="pList-label"> 6</label>
                             </div>
 
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label"> 9</label>
+                                <label for="pList-checkbox" className="pList-label"> 7</label>
                             </div>
 
-                            <div class="pList-item-container mt-1">
+                            <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
-                                    class="pList-checkbox"
+                                    className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" class="pList-label"> 11</label>
+                                <label for="pList-checkbox" className="pList-label"> 9</label>
+                            </div>
+
+                            <div className="pList-item-container mt-1">
+                                <input
+                                    type="checkbox"
+                                    id="pList-checkbox"
+                                    className="pList-checkbox"
+                                />
+                                <label for="pList-checkbox" className="pList-label"> 11</label>
                             </div>
                         </div>
                     </div>
 
                     {/* <!-- vart space --> */}
-                    <div class="vert-space"></div>
+                    <div className="vert-space"></div>
                 </div>
             </aside>
         </>

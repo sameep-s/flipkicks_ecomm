@@ -11,14 +11,14 @@ const ProductList = () => {
         <>
             <Navbar />
 
-            <main class="main-container-pList">
-                <div class="content-wrap-pList">
+            <main className="main-container-pList">
+                <div className="content-wrap-pList">
                     <Filters />
                     {/* <!---------------------  main --> */}
-                    <div class="main-pList">
-                        <div class="main-pList-wrapper">
-                            <div class="main-pList-heading">Showing All Products</div>
-                            <div class="vert-space"></div>
+                    <div className="main-pList">
+                        <div className="main-pList-wrapper">
+                            <div className="main-pList-heading">Showing All Products</div>
+                            <div className="vert-space"></div>
 
                             <div className="main-card-area">
                                 <CardProduct />

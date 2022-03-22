@@ -10,8 +10,8 @@ const Home = () => {
         <>
             <Navbar />
 
-            <main class="main-container mt-4 flex flex-col a-item-center">
-                <div class="content-wrapper-main">
+            <main className="main-container mt-4 flex flex-col a-item-center">
+                <div className="content-wrapper-main">
                     <BannerHome
                         img="https://res.cloudinary.com/sameep1/image/upload/v1647955193/project_Ecomm/progress_cbtfxz.jpg"
                         heading="POWER YOUR PROGRESS"
@@ -47,14 +47,18 @@ const Home = () => {
                     <BannerHome
                         img="https://res.cloudinary.com/sameep1/image/upload/v1647955193/project_Ecomm/bannerLast_rlwqgi.jpg"
                         heading="DON'T MISS"
-                        msg="Flow in classic design"
+                        msg="Flow in classNameic design"
                         subHeading="ICON CLASH COLLECTION"
                         link="#"
                     />
+
                 </div>
-                <footer class="home-footer flex jc-center a-item-center">
+
+
+                <footer className="home-footer flex jc-center a-item-center">
                     CHOOSE YOUR KICKS @ FlipKicks
                 </footer>
+
             </main>
 
         </>
