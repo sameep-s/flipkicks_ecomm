@@ -1,5 +1,6 @@
 import React from 'react';
 import '../pages-css/main.css';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
     return (
@@ -13,7 +14,7 @@ const Signup = () => {
                             name=""
                             id="email"
                             className="form-input mt-4"
-                            autocomplete="off"
+                            autoComplete="off"
                             placeholder="Email Adderess"
                         />
 
@@ -22,7 +23,7 @@ const Signup = () => {
                             name=""
                             id="password"
                             className="form-input mt-2"
-                            autocomplete="off"
+                            autoComplete="off"
                             placeholder="Choose Password"
                         />
 
@@ -31,7 +32,7 @@ const Signup = () => {
                             name=""
                             id="confirm-password"
                             className="form-input mt-2"
-                            autocomplete="off"
+                            autoComplete="off"
                             placeholder="Confirm Password"
                         />
 
@@ -40,16 +41,16 @@ const Signup = () => {
                             name=""
                             id="fname"
                             className="form-input mt-2"
-                            autocomplete="off"
+                            autoComplete="off"
                             placeholder="First Name"
                         />
 
                         <input
                             type="text"
                             name=""
-                            id="confirm-password"
+                            id="lastName"
                             className="form-input mt-2"
-                            autocomplete="off"
+                            autoComplete="off"
                             placeholder="Last Name"
                         />
                     </div>
@@ -57,7 +58,7 @@ const Signup = () => {
                     <div className="form-utility mt-2">
                         <div className="form-utility-1 flex a-item-center">
                             <input type="checkbox" id="remembercheck" className="form-checkbox" />
-                            <label for="remembercheck " className="form-check ml-1"
+                            <label htmlFor="remembercheck " className="form-check ml-1"
                             >Sign up for emails to get updates from FlipKicks.</label
                             >
                         </div>
@@ -74,7 +75,7 @@ const Signup = () => {
 
                     <div className="form-end form-utility mt-1">
                         Already have a Account?
-                        <a href="./login.html" className="form-link"> Log in.</a>
+                        <Link to="/login" className="form-link"> Log in.</Link>
                     </div>
                 </form>
             </main>

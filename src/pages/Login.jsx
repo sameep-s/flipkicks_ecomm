@@ -1,5 +1,6 @@
 import React from 'react';
 import '../pages-css/main.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -10,16 +11,16 @@ const Login = () => {
                 <form action="" className="form-wrapper">
                     <div className="form-heading">Welcome Back</div>
                     <div className="form-body">
-                        <label for="email" className="form-label mt-3">Enter your Email.</label>
+                        <label htmlFor="email" className="form-label mt-3">Enter your Email.</label>
                         <input
                             type="text"
                             name=""
                             id="email"
                             className="form-input mt-1"
-                            autocomplete="off"
+                            autoComplete="off"
                         />
 
-                        <label for="password" className="form-label mt-3"
+                        <label htmlFor="password" className="form-label mt-3"
                         >Enter your password</label
                         >
                         <input
@@ -27,14 +28,14 @@ const Login = () => {
                             name=""
                             id="password"
                             className="form-input mt-1"
-                            autocomplete="off"
+                            autoComplete="off"
                         />
                     </div>
 
                     <div className="form-utility mt-2">
                         <div className="form-utility-1 flex a-item-center">
                             <input type="checkbox" id="remembercheck" className="form-checkbox" />
-                            <label for="remembercheck " className="form-check ml-1"
+                            <label htmlFor="remembercheck " className="form-check ml-1"
                             >Remember Me</label
                             >
 
@@ -52,7 +53,7 @@ const Login = () => {
                     </div>
 
                     <div className="form-end form-utility mt-1">
-                        Not a Member? <a href="./signup.html" className="form-link">Sign in.</a>
+                        Not a Member? <Link to="/signup" className="form-link">Sign in.</Link>
                     </div>
                 </form>
             </main>

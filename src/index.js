@@ -1,21 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import App from "./App";
 
+import { makeServer } from "./server";
 
-import Home from './pages/Home';
-
-
-// import { makeServer } from "./server";
-// import App from "./App";
 // Call make Server
-// makeServer();
+makeServer();
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -2,6 +2,7 @@ import React from 'react';
 import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faBars, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -9,9 +10,9 @@ const Navbar = () => {
             <nav className="navbar pos-stick flex jc-center a-item-center">
                 <div className="nav-inner flex a-item-center jc-space-btw">
                     <div className="navbar--container-strt flex a-item-center">
-                        <a href="../index.html">
+                        <Link to="/">
                             <div className="brand-name">FlipKicks</div>
-                        </a>
+                        </Link>
                     </div>
                     <div className="navbar--container-middle flex a-item-center">
                         <button className="btn-search-nav">
@@ -28,24 +29,25 @@ const Navbar = () => {
                     <div className="navbar--container-end flex a-item-center">
                         <div className="nav-icon-container">
                             <div className="nav-heart-icon">
-                                <a href="./wishlist.html">
+                                <Link to="/cart">
                                     <FontAwesomeIcon icon={faShoppingCart} className="nav__icons" ></FontAwesomeIcon>
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
                         <div className="nav-icon-container">
                             <div className="nav-cart-icon">
-                                <a href="./cart.html">
+
+                                <Link to="/wishlist">
                                     <FontAwesomeIcon icon={faHeart} className="nav__icons" ></FontAwesomeIcon>
                                     <div className="fa-solid fa-cart-shopping" id="cart-icon"></div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
-                        <a href="./login.html" className="btn-nav jc-center a-item-center"
-                        >Login</a
-                        >
+                        <Link to="/login" className="btn-nav jc-center a-item-center"
+                        >Login
+                        </Link>
                     </div>
                 </div>
             </nav>
