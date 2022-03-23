@@ -1,7 +1,13 @@
 import React from 'react';
 import '../pages-css/main.css';
+import { useFilter } from '../util_Contexts/filter-context';
 
 const Filters = () => {
+
+
+    const { state, dispatch } = useFilter();
+    const { rangeValue } = state;
+
     return (
         <>
             {/* <!-- sidebar --> */}
@@ -19,6 +25,7 @@ const Filters = () => {
                                     name="pList-radio"
                                     id="pList-radio-high"
                                     className="pList-radio"
+                                    onChange={() => dispatch({ type: "sortBy", payload: "LOW_TO_HIGH" })}
                                 />
                                 <label htmlFor="pList-radio-high" className="pList-label">
                                     Price Low To High</label
@@ -30,6 +37,7 @@ const Filters = () => {
                                     name="pList-radio"
                                     id="pList-radio-high"
                                     className="pList-radio"
+                                    onChange={() => dispatch({ type: "sortBy", payload: "HIGH_TO_LOW" })}
                                 />
                                 <label htmlFor="pList-radio-high" className="pList-label">
                                     Price Low To High</label
@@ -53,8 +61,10 @@ const Filters = () => {
                                     type="range"
                                     className="price-slider mb-1"
                                     id="range-price"
-                                    min="500"
+                                    min="5000"
                                     max="50000"
+                                    value={rangeValue}
+                                    onChange={(e) => dispatch({ type: "range", payload: e.target.value })}
                                 />
 
                                 <label htmlFor="range-price"> </label>
@@ -73,7 +83,7 @@ const Filters = () => {
                                 <div className="under-right">
                                     <input
                                         type="text"
-                                        placeholder="50000"
+                                        placeholder={rangeValue}
                                         name=""
                                         id=""
                                         className="input-r-under"

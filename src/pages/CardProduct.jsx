@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function CardProduct() {
+function CardProduct({ author, title, price, category }) {
     return (
         <>
 
@@ -12,13 +12,13 @@ function CardProduct() {
 
                 <div className="pList-card-body">
                     <div className="pList-card-title mt-1">
-                        Nike Air Jordan 1 x Off-White
+                        {author}
                     </div>
                     <div className="pList-card-subtitle mt-1 txt-gray">
-                        Men's Shoe
+                        {title}
                     </div>
 
-                    <div className="pList-card-price mt-1">$6000</div>
+                    <div className="pList-card-price mt-1">{price}</div>
                     <button className="pList-card-btn">BUY</button>
                 </div>
             </div>
