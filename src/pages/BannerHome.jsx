@@ -2,6 +2,9 @@ import React from 'react';
 import '../pages-css/main.css';
 
 const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
+
+
+
     return (
         <>
 
@@ -12,7 +15,8 @@ const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
                         <img
                             src={img}
                             alt="image"
-                            className="img-full skeleton-img"
+                            // className="img-full skeleton-img"
+                            className={img ? "img-full" : "img-full skeleton-img"}
                             loading="lazy"
                         />
                     </a>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faBars, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons"
+import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
