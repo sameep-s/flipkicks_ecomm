@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home'
 import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
+import ProductList from './pages/ProductList';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
@@ -17,6 +18,7 @@ function App() {
       <Routes  >
         <Route path="/" element={<Home />} />
         <Route path='/mock' element={<Mockman />} />
+        <Route path='/products' element={<ProductList />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/login' element={<Login />} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../pages-css/main.css';
+import { Link } from 'react-router-dom';
 
 const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
 
@@ -11,7 +12,7 @@ const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
             <div className="item-container-full mb-4">
                 <div className="heading-full">{heading}</div>
                 <div className="content-full">
-                    <a href={link}>
+                    <Link to={link}>
                         <img
                             src={img}
                             alt="image"
@@ -19,7 +20,7 @@ const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
                             className={img ? "img-full" : "img-full skeleton-img"}
                             loading="lazy"
                         />
-                    </a>
+                    </Link>
                 </div>
 
                 <div
@@ -31,13 +32,13 @@ const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
                         </div>
                         <div className="text-heading-main">{subHeading}</div>
                     </div>
-                    <a href={link}>
+                    <Link to={link}>
                         <button
                             className="btn-sq btn-dark btn-text mt-2 jc-center a-item-center"
                         >
                             Shop All
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </div>
 

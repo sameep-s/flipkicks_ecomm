@@ -16,7 +16,7 @@ const Home = () => {
                         heading="POWER YOUR PROGRESS"
                         msg="Member Access: 17 - 28 February."
                         subHeading="FIND YOUR FAST"
-                        link="#"
+                        link="/products"
                     />
 
                     <BannerHomeHalf

@@ -20,7 +20,7 @@ const Filters = () => {
                                     id="pList-radio-high"
                                     className="pList-radio"
                                 />
-                                <label for="pList-radio-high" className="pList-label">
+                                <label htmlFor="pList-radio-high" className="pList-label">
                                     Price Low To High</label
                                 >
                             </div>
@@ -31,7 +31,7 @@ const Filters = () => {
                                     id="pList-radio-high"
                                     className="pList-radio"
                                 />
-                                <label for="pList-radio-high" className="pList-label">
+                                <label htmlFor="pList-radio-high" className="pList-label">
                                     Price Low To High</label
                                 >
                             </div>
@@ -46,7 +46,7 @@ const Filters = () => {
                         <div className="pList-container-body">
                             <div className="range-upper txt-gray">
                                 <div className="upper-left">Min</div>
-                                <upper className="upper-right">Max</upper>
+                                <div className="upper-right">Max</div>
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
@@ -57,7 +57,7 @@ const Filters = () => {
                                     max="50000"
                                 />
 
-                                <label for="range-price"> </label>
+                                <label htmlFor="range-price"> </label>
                             </div>
                             <div className="range-under">
                                 <div className="under-left">
@@ -95,7 +95,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox" className="pList-label">
                                     Jordan</label
                                 >
                             </div>
@@ -105,7 +105,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike Sportswear</label
                                 >
                             </div>
@@ -115,7 +115,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox" className="pList-label">
                                     NikeLab</label
                                 >
                             </div>
@@ -126,7 +126,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox" className="pList-label">
                                     Jordan X Off-White</label
                                 >
                             </div>
@@ -137,7 +137,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike Pro</label
                                 >
                             </div>
@@ -148,7 +148,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike</label
                                 >
                             </div>
@@ -167,7 +167,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label"> 4.5</label>
+                                <label htmlFor="pList-checkbox" className="pList-label"> 4.5</label>
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
@@ -175,7 +175,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label"> 5</label>
+                                <label htmlFor="pList-checkbox" className="pList-label"> 5</label>
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
@@ -183,16 +183,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label"> 6</label>
-                            </div>
-
-                            <div className="pList-item-container mt-1">
-                                <input
-                                    type="checkbox"
-                                    id="pList-checkbox"
-                                    className="pList-checkbox"
-                                />
-                                <label for="pList-checkbox" className="pList-label"> 7</label>
+                                <label htmlFor="pList-checkbox" className="pList-label"> 6</label>
                             </div>
 
                             <div className="pList-item-container mt-1">
@@ -201,7 +192,7 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label"> 9</label>
+                                <label htmlFor="pList-checkbox" className="pList-label"> 7</label>
                             </div>
 
                             <div className="pList-item-container mt-1">
@@ -210,7 +201,16 @@ const Filters = () => {
                                     id="pList-checkbox"
                                     className="pList-checkbox"
                                 />
-                                <label for="pList-checkbox" className="pList-label"> 11</label>
+                                <label htmlFor="pList-checkbox" className="pList-label"> 9</label>
+                            </div>
+
+                            <div className="pList-item-container mt-1">
+                                <input
+                                    type="checkbox"
+                                    id="pList-checkbox"
+                                    className="pList-checkbox"
+                                />
+                                <label htmlFor="pList-checkbox" className="pList-label"> 11</label>
                             </div>
                         </div>
                     </div>
