@@ -11,6 +11,8 @@ export const products = [
     title: "You Can't WIN",
     author: "Shiv Khera",
     price: 5000,
+    brand: "nike",
+    size: 6,
     categoryName: "non-fiction",
   },
   {
@@ -18,6 +20,8 @@ export const products = [
     title: "You are Winner",
     author: "Junaid Qureshi",
     price: 1000,
+    brand: "jordan",
+    size: 5,
     categoryName: "horror",
   },
   {
@@ -25,6 +29,8 @@ export const products = [
     title: "Think and Grow Rich",
     author: "Shiv Khera",
     price: 2000,
+    brand: "nikelab",
+    size: 9,
     categoryName: "fiction",
   },
 ];

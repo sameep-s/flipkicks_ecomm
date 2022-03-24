@@ -6,7 +6,12 @@ const FilterContext = createContext(defaultFilterContextVal);
 
 const FilterProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer(FilterReducer, { sortBy: null, rangeValue: 5000 });
+    const [state, dispatch] = useReducer(FilterReducer, {
+        sortBy: null,
+        rangeValue: 5000,
+        brand: [],
+        size: null
+    });
 
     return (
         <>

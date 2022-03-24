@@ -8,10 +8,20 @@ export const FilterReducer = (state, action) => {
             return { ...state, rangeValue: action.payload }
 
         case "brand":
-            return { ...state, brand: action.payload }
+            if (state.brand.includes(action.payload)) {
+
+                const brandCopy = [...state.brand];
+                brandCopy.splice(state.brand.indexOf(action.payload), 1);
+
+                return { ...state, brand: brandCopy }
+            }
+            else {
+                return { ...state, brand: [...state.brand, action.payload] }
+
+            }
 
         case "size":
-            return { ...state, size: action.payload }
+            return { ...state, size: [action.payload] }
 
         default:
             return state;

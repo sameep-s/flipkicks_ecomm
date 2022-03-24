@@ -6,6 +6,7 @@ import CardProduct from './CardProduct';
 import { useFilter } from '../util_Contexts/filter-context';
 import { getSortedProducts } from '../util_fucntions/getSortedProducts';
 import '../pages-css/main.css';
+import { dataFilterBrands } from '../util_fucntions/dataFilterBrands';
 
 
 const ProductList = () => {
@@ -13,17 +14,19 @@ const ProductList = () => {
     const [productsData, setProductsData] = useState([]);
 
     const { state } = useFilter();
-    const { sortBy } = state;
+    const { sortBy, brand } = state;
 
     const productList = [...productsData];
     const sortedData = getSortedProducts(productList, sortBy);
-    console.log(`sortedData`, sortedData);
+    const filteredDataBrands = dataFilterBrands(sortedData, brand);
+    console.log(filteredDataBrands);
+
+
 
     useEffect(() => {
         (async () => {
             const productsResponse = await axios.get('./api/products')
             setProductsData([...productsResponse.data.products])
-            console.log(`productResponse`, productsResponse.data.products);
         })();
 
     }, []);
@@ -41,7 +44,7 @@ const ProductList = () => {
                             <div className="main-pList-heading">Showing All Products</div>
                             <div className="vert-space"></div>
                             <div className="main-card-area">
-                                {sortedData.map(({ _id, author, title, price, category }) => <CardProduct key={_id} author={author} title={title} price={price} category={category} />)}
+                                {filteredDataBrands.map(({ _id, author, title, price, category }) => <CardProduct key={_id} author={author} title={title} price={price} category={category} />)}
                             </div>
                         </div>
                     </div>

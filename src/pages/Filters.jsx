@@ -104,6 +104,7 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    onChange={() => dispatch({ type: "brand", payload: "jordan" })}
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Jordan</label
@@ -114,6 +115,8 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    onChange={() => dispatch({ type: "brand", payload: "nike-sportswear" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike Sportswear</label
@@ -124,6 +127,8 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    onChange={() => dispatch({ type: "brand", payload: "nikelab" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     NikeLab</label
@@ -135,6 +140,8 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    onChange={() => dispatch({ type: "brand", payload: "jordanxoffwhite" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Jordan X Off-White</label
@@ -146,6 +153,8 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    onChange={() => dispatch({ type: "brand", payload: "nikepro" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike Pro</label
@@ -157,6 +166,8 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    onChange={() => dispatch({ type: "brand", payload: "nike" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike</label
