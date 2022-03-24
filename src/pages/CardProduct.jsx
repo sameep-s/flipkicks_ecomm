@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 
 function CardProduct({ author, title, price, category }) {
@@ -20,6 +23,11 @@ function CardProduct({ author, title, price, category }) {
 
                     <div className="pList-card-price mt-1">{price}</div>
                     <button className="pList-card-btn">BUY</button>
+                </div>
+
+
+                <div className="pList-card-badge pos-abs">
+                    <FontAwesomeIcon icon={faHeart} className="card-icon-heart card-icon-liked " />
                 </div>
             </div>
 
