@@ -1,13 +1,22 @@
 import React from 'react';
 import '../pages-css/main.css';
+import { useFilter } from '../util_Contexts/filter-context';
 
 const Filters = () => {
+
+
+    const { state, dispatch } = useFilter();
+    const { sortBy, rangeValue, brand, size } = state;
+
     return (
         <>
             {/* <!-- sidebar --> */}
             <aside className="aside-pList-wrap mb-1">
                 <div className="aside-pList-content">
-                    <div className="aside-pList-heading">Filters</div>
+                    <div className="aside-pList-heading">
+                        <span>Filters</span>
+                        <span><button onClick={() => dispatch({ type: 'reset', payload: state })}>Clear All</button></span>
+                    </div>
                     <div className="pList-content-container">
                         <div className="pList-container-heading">Sort By</div>
                         <hr />
@@ -19,6 +28,8 @@ const Filters = () => {
                                     name="pList-radio"
                                     id="pList-radio-high"
                                     className="pList-radio"
+                                    checked={sortBy === "LOW_TO_HIGH"}
+                                    onChange={() => dispatch({ type: "sortBy", payload: "LOW_TO_HIGH" })}
                                 />
                                 <label htmlFor="pList-radio-high" className="pList-label">
                                     Price Low To High</label
@@ -30,6 +41,8 @@ const Filters = () => {
                                     name="pList-radio"
                                     id="pList-radio-high"
                                     className="pList-radio"
+                                    checked={sortBy === "HIGH_TO_LOW"}
+                                    onChange={() => dispatch({ type: "sortBy", payload: "HIGH_TO_LOW" })}
                                 />
                                 <label htmlFor="pList-radio-high" className="pList-label">
                                     Price Low To High</label
@@ -54,7 +67,9 @@ const Filters = () => {
                                     className="price-slider mb-1"
                                     id="range-price"
                                     min="500"
-                                    max="50000"
+                                    max="9000"
+                                    value={rangeValue || "5000"}
+                                    onChange={(e) => dispatch({ type: "range", payload: e.target.value })}
                                 />
 
                                 <label htmlFor="range-price"> </label>
@@ -73,7 +88,7 @@ const Filters = () => {
                                 <div className="under-right">
                                     <input
                                         type="text"
-                                        placeholder="50000"
+                                        placeholder={rangeValue || "5000"}
                                         name=""
                                         id=""
                                         className="input-r-under"
@@ -94,6 +109,8 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    checked={brand.includes("jordan")}
+                                    onChange={() => dispatch({ type: "brand", payload: "jordan" })}
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Jordan</label
@@ -104,6 +121,9 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    checked={brand.includes("nike-sportswear")}
+                                    onChange={() => dispatch({ type: "brand", payload: "nike-sportswear" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike Sportswear</label
@@ -114,6 +134,9 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    checked={brand.includes("nikelab")}
+                                    onChange={() => dispatch({ type: "brand", payload: "nikelab" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     NikeLab</label
@@ -125,6 +148,9 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    checked={brand.includes("jordanxoffwhite")}
+                                    onChange={() => dispatch({ type: "brand", payload: "jordanxoffwhite" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Jordan X Off-White</label
@@ -136,6 +162,9 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    checked={brand.includes("nikepro")}
+                                    onChange={() => dispatch({ type: "brand", payload: "nikepro" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike Pro</label
@@ -147,6 +176,9 @@ const Filters = () => {
                                     type="checkbox"
                                     id="pList-checkbox"
                                     className="pList-checkbox"
+                                    checked={brand.includes("nike")}
+                                    onChange={() => dispatch({ type: "brand", payload: "nike" })}
+
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label">
                                     Nike</label
@@ -165,6 +197,8 @@ const Filters = () => {
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
+                                    checked={size.includes(4.5)}
+                                    onChange={() => dispatch({ type: "size", payload: 4.5 })}
                                     className="pList-checkbox"
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label"> 4.5</label>
@@ -172,7 +206,9 @@ const Filters = () => {
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
+                                    checked={size.includes(5)}
                                     id="pList-checkbox"
+                                    onChange={() => dispatch({ type: "size", payload: 5 })}
                                     className="pList-checkbox"
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label"> 5</label>
@@ -181,6 +217,8 @@ const Filters = () => {
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
+                                    checked={size.includes(6)}
+                                    onChange={() => dispatch({ type: "size", payload: 6 })}
                                     className="pList-checkbox"
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label"> 6</label>
@@ -190,6 +228,8 @@ const Filters = () => {
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
+                                    checked={size.includes(7)}
+                                    onChange={() => dispatch({ type: "size", payload: 7 })}
                                     className="pList-checkbox"
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label"> 7</label>
@@ -199,6 +239,8 @@ const Filters = () => {
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
+                                    checked={size.includes(9)}
+                                    onChange={() => dispatch({ type: "size", payload: 9 })}
                                     className="pList-checkbox"
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label"> 9</label>
@@ -208,6 +250,8 @@ const Filters = () => {
                                 <input
                                     type="checkbox"
                                     id="pList-checkbox"
+                                    checked={size.includes(11)}
+                                    onChange={() => dispatch({ type: "size", payload: 11 })}
                                     className="pList-checkbox"
                                 />
                                 <label htmlFor="pList-checkbox" className="pList-label"> 11</label>

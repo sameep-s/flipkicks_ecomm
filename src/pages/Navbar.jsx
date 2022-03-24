@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons"
+import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <div className="nav-icon-container">
                             <div className="nav-heart-icon">
                                 <Link to="/cart">
-                                    <FontAwesomeIcon icon={faShoppingCart} className="nav__icons" ></FontAwesomeIcon>
+                                    <FontAwesomeIcon icon={faShoppingCart} className="nav__icons" />
                                 </Link>
                             </div>
                         </div>
