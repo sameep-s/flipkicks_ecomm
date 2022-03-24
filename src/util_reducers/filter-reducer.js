@@ -1,5 +1,12 @@
 export const FilterReducer = (state, action) => {
 
+    const defaultState = {
+        sortBy: null,
+        rangeValue: 0,
+        brand: [],
+        size: []
+    }
+
     switch (action.type) {
         case "sortBy":
             return { ...state, sortBy: action.payload }
@@ -9,10 +16,8 @@ export const FilterReducer = (state, action) => {
 
         case "brand":
             if (state.brand.includes(action.payload)) {
-
                 const brandCopy = [...state.brand];
                 brandCopy.splice(state.brand.indexOf(action.payload), 1);
-
                 return { ...state, brand: brandCopy }
             }
             else {
@@ -21,7 +26,19 @@ export const FilterReducer = (state, action) => {
             }
 
         case "size":
-            return { ...state, size: [action.payload] }
+            if (state.size.includes(action.payload)) {
+                const sizeCopy = [...state.size];
+                sizeCopy.splice(state.size.indexOf(action.payload), 1)
+                return { ...state, size: sizeCopy }
+            }
+            else {
+                return {
+                    ...state, size: [...state.size, action.payload]
+                }
+            }
+
+        case "reset":
+            return defaultState;
 
         default:
             return state;

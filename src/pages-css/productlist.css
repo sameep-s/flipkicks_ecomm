@@ -22,6 +22,18 @@
 .aside-pList-heading {
   font-family: var(--font-bold);
   font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside-pList-heading span button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border: 0.1rem solid var(--dark);
+  background-color: white;
+  font-family: var(--font-bold);
 }
 
 .pList-content-container {

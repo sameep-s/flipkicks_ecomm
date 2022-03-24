@@ -8,9 +8,9 @@ const FilterProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(FilterReducer, {
         sortBy: null,
-        rangeValue: 5000,
+        rangeValue: 0,
         brand: [],
-        size: null
+        size: []
     });
 
     return (

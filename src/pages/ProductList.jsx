@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import '../pages-css/main.css';
+
 import axios from 'axios';
 import Navbar from './Navbar';
 import Filters from './Filters';
 import CardProduct from './CardProduct';
 import { useFilter } from '../util_Contexts/filter-context';
 import { getSortedProducts } from '../util_fucntions/getSortedProducts';
-import '../pages-css/main.css';
 import { dataFilterBrands } from '../util_fucntions/dataFilterBrands';
+import { getFilteredDataSize } from '../util_fucntions/getFilteredDataSize';
+import { getFilteredDataPrice } from '../util_fucntions/getFilteredDataPrice';
 
 
 const ProductList = () => {
@@ -14,12 +17,19 @@ const ProductList = () => {
     const [productsData, setProductsData] = useState([]);
 
     const { state } = useFilter();
-    const { sortBy, brand } = state;
+    const { sortBy, rangeValue, brand, size } = state;
 
     const productList = [...productsData];
     const sortedData = getSortedProducts(productList, sortBy);
     const filteredDataBrands = dataFilterBrands(sortedData, brand);
-    console.log(filteredDataBrands);
+    const filteredDataSize = getFilteredDataSize(filteredDataBrands, size);
+    const filteredDataPrice = getFilteredDataPrice(filteredDataSize, rangeValue)
+    console.log(filteredDataPrice);
+
+
+
+    // console.log(filteredDataBrands); 
+
 
 
 
@@ -44,7 +54,7 @@ const ProductList = () => {
                             <div className="main-pList-heading">Showing All Products</div>
                             <div className="vert-space"></div>
                             <div className="main-card-area">
-                                {filteredDataBrands.map(({ _id, author, title, price, category }) => <CardProduct key={_id} author={author} title={title} price={price} category={category} />)}
+                                {filteredDataPrice.map(({ _id, author, title, price, category }) => <CardProduct key={_id} author={author} title={title} price={price} category={category} />)}
                             </div>
                         </div>
                     </div>
