@@ -24,11 +24,6 @@ const ProductList = () => {
     const filteredDataBrands = dataFilterBrands(sortedData, brand);
     const filteredDataSize = getFilteredDataSize(filteredDataBrands, size);
     const filteredDataPrice = getFilteredDataPrice(filteredDataSize, rangeValue)
-    console.log(filteredDataPrice);
-
-
-
-    // console.log(filteredDataBrands); 
 
 
 
