@@ -8,9 +8,7 @@ const ProductsContext = createContext(defaultProductsValue);
 
 const ProductsProvider = ({ children }) => {
 
-
-
-    const [state, dispatch] = useReducer(productsReducer, {
+    const [state_Products, dispatch] = useReducer(productsReducer, {
         loading: true,
         products: [],
         error: ""
@@ -21,8 +19,7 @@ const ProductsProvider = ({ children }) => {
         (async () => {
             try {
                 const { data } = await axios.get('/api/products');
-                console.log(data);
-                dispatch({ type: "SUCCESS", payload: data })
+                dispatch({ type: "SUCCESS", payload: data.products })
             }
             catch (e) {
                 dispatch({ type: "ERROR", payload: e.message })
@@ -36,7 +33,7 @@ const ProductsProvider = ({ children }) => {
 
     return (
         <>
-            <ProductsContext.Provider value={{ state, dispatch }}>
+            <ProductsContext.Provider value={{ state_Products, dispatch }}>
                 {children}
             </ProductsContext.Provider>
         </>

@@ -1,12 +1,12 @@
-export const productsReducer = (state, action) => {
+export const productsReducer = (state_Products, action) => {
 
     switch (action.type) {
 
         case "SUCCESS":
-            return { ...state, products: action.payload, loading: false }
+            return { ...state_Products, products: action.payload, loading: false }
 
         case "ERROR":
-            return { ...state, error: action.payload }
+            return { ...state_Products, error: action.payload }
     }
 
 }
