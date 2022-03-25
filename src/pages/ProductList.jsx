@@ -9,17 +9,16 @@ import { dataFilterBrands, getFilteredDataPrice, getFilteredDataSize, getSortedP
 
 const ProductList = () => {
 
-    const { state_Products } = useProducts();
     const { state } = useFilter();
-
     const { sortBy, rangeValue, brand, size } = state;
 
+    const { state_Products } = useProducts();
     const productList = [...state_Products.products];
+
     const sortedData = getSortedProducts(productList, sortBy);
     const filteredDataBrands = dataFilterBrands(sortedData, brand);
     const filteredDataSize = getFilteredDataSize(filteredDataBrands, size);
     const filteredDataPrice = getFilteredDataPrice(filteredDataSize, rangeValue)
-
 
 
     return (
@@ -35,7 +34,7 @@ const ProductList = () => {
                             <div className="main-pList-heading">Showing All Products</div>
                             <div className="vert-space"></div>
                             <div className="main-card-area">
-                                {filteredDataPrice?.map(({ _id, author, title, price, category }) => <CardProduct key={_id} author={author} title={title} price={price} category={category} />)}
+                                {filteredDataPrice?.map((product) => <CardProduct key={product._id} {...product} />)}
                             </div>
                         </div>
                     </div>

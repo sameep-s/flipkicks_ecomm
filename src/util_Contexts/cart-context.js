@@ -3,17 +3,18 @@ import { CartReducer } from "../util_reducers/cart-reducer";
 
 
 
-const defaultCartContextValue = []
+const defaultCartContextValue = [{ products: "none" }]
 const CartContext = createContext(defaultCartContextValue);
 
 const CartProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer(CartReducer, {})
-
+    const [state_Cart, dispatch_Cart] = useReducer(CartReducer, {
+        cart: []
+    })
 
     return (
         <>
-            <CartContext.Provider value={{ state, dispatch }}>
+            <CartContext.Provider value={{ state_Cart, dispatch_Cart }}>
                 {children}
             </CartContext.Provider>
         </>
