@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import { useCart } from '../util_Contexts';
+import { useWishlist } from '../util_Contexts/wishlist-context';
 
 const Navbar = () => {
 
-    const { state_Cart } = useCart()
+    const { state_Cart: { cart } } = useCart()
+    const { state_Wishlist: { wishlist } } = useWishlist();
 
     return (
         <>
@@ -35,18 +37,18 @@ const Navbar = () => {
                             <div className="nav-heart-icon pos-rel">
                                 <Link to="/cart">
                                     <FontAwesomeIcon icon={faShoppingCart} className="nav__icons" />
-                                    {state_Cart.cart.length === 0 || <span className="badge badge-danger">{state_Cart.cart.length}</span>}
+                                    {cart.length === 0 || <div className="badge badge-danger">{cart.length}</div>}
                                 </Link>
 
                             </div>
                         </div>
 
                         <div className="nav-icon-container">
-                            <div className="nav-cart-icon">
-
+                            <div className="nav-cart-icon pos-rel">
                                 <Link to="/wishlist">
                                     <FontAwesomeIcon icon={faHeart} className="nav__icons" ></FontAwesomeIcon>
                                     <div className="fa-solid fa-cart-shopping" id="cart-icon"></div>
+                                    {wishlist.length === 0 || <div className="badge badge-danger">{wishlist.length}</div>}
                                 </Link>
                             </div>
                         </div>
