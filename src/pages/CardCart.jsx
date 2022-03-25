@@ -1,9 +1,13 @@
 import React from 'react'
 import '../pages-css/cart.css';
+import { useCart } from '../util_Contexts';
 
 
 
-const CardCart = () => {
+
+const CardCart = (product) => {
+    const { dispatch_Cart } = useCart();
+
     return (
         <>
             <div className="cart-product-wrapper">
@@ -21,15 +25,15 @@ const CardCart = () => {
                             <div className="cart-sub-cont2">
                                 <div className="cart-info-qty">Quantity:</div>
                                 <div className="cart-qty-btn">
-                                    <button className="btn-cart-qty">-</button>
+                                    <button className="btn-cart-qty" onClick={() => dispatch_Cart({ type: "SUB_ITEM_QTY", payload: product })}>-</button>
                                     <input
                                         type="text"
                                         name=""
                                         id=""
                                         className="cart-info-qty-input"
-                                        placeholder="1"
+                                        placeholder={product.qty}
                                     />
-                                    <button className="btn-cart-qty">+</button>
+                                    <button className="btn-cart-qty" onClick={() => dispatch_Cart({ type: "ADD_ITEM_QTY", payload: product })} >+</button>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +43,7 @@ const CardCart = () => {
                     <button className="btn-sq btn-dark btn-wislist">
                         Move To Wishlist
                     </button>
-                    <button className="btn-sq btn-dark">Remove from Cart</button>
+                    <button className="btn-sq btn-dark" onClick={() => dispatch_Cart({ type: "DELETE_ITEM_CART", payload: product })}>Remove from Cart</button>
                 </div>
             </div>
         </>

@@ -22,16 +22,16 @@ export const CartReducer = (state_Cart, action_Cart) => {
             }
 
         case "SUB_ITEM_QTY":
-            if (action_Cart.payload.qty === 0)
+            if (action_Cart.payload.qty === 1)
                 return {
-                    ...state, cart: cart.filter(item => item._id !== action_Cart.payload._id)
+                    ...state_Cart, cart: cart.filter(item => item._id !== action_Cart.payload._id)
                 }
 
             return {
                 ...state_Cart, cart: cart.map(item => item._id === action_Cart.payload._id ? { ...item, qty: item.qty - 1 } : item)
             }
 
-        case "DELETE_ITEM":
+        case "DELETE_ITEM_CART":
             return {
                 ...state_Cart, cart: cart?.filter(item => item._id !== action_Cart.payload._id)
             }
