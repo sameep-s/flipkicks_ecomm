@@ -6,6 +6,9 @@ import { FilterProvider } from "./util_Contexts/filter-context";
 
 
 import { makeServer } from "./server";
+import { CartProvider } from "./util_Contexts/cart-context";
+import { ProductsProvider } from "./util_Contexts/products-context";
+
 // Call make Server
 makeServer();
 
@@ -13,9 +16,13 @@ makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <FilterProvider>
-      <App />
-    </FilterProvider>
+    <ProductsProvider>
+      <FilterProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </FilterProvider>
+    </ProductsProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

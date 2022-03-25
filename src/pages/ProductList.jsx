@@ -19,6 +19,7 @@ const ProductList = () => {
     const { state } = useFilter();
     const { sortBy, rangeValue, brand, size } = state;
 
+
     const productList = [...productsData];
     const sortedData = getSortedProducts(productList, sortBy);
     const filteredDataBrands = dataFilterBrands(sortedData, brand);
@@ -35,6 +36,8 @@ const ProductList = () => {
         })();
 
     }, []);
+
+
 
     return (
         <>
