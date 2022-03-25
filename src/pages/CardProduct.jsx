@@ -1,16 +1,21 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useCart } from '../util_Contexts';
 
 
-function CardProduct({ author, title, price, category }) {
+const CardProduct = (product) => {
+
+    const { image, title, author, price } = product;
+
+    const { dispatch_Cart } = useCart()
+
     return (
         <>
 
             <div className="pList-card-wrapper pos-rel">
                 <div className="pList-card-img">
-                    <img src="https://images.unsplash.com/photo-1610870372593-a8647b04451f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="product-image" />
+                    <img src={image} alt="product-image" />
                 </div>
 
                 <div className="pList-card-body">
@@ -22,12 +27,12 @@ function CardProduct({ author, title, price, category }) {
                     </div>
 
                     <div className="pList-card-price mt-1">{price}</div>
-                    <button className="pList-card-btn">BUY</button>
+                    <button className="pList-card-btn" onClick={() => dispatch_Cart({ type: "ADD_TO_CART", payload: product })}>BUY</button>
                 </div>
 
 
                 <div className="pList-card-badge pos-abs">
-                    <FontAwesomeIcon icon={faHeart} className="card-icon-heart card-icon-liked " />
+                    <FontAwesomeIcon icon={faHeart} className="card-icon-heart card-icon-liked " onClick={() => dispatch_Cart({ type: "DELETE_ITEM", payload: product })} />
                 </div>
             </div>
 

@@ -3,8 +3,12 @@ import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import { useCart } from '../util_Contexts';
 
 const Navbar = () => {
+
+    const { state_Cart } = useCart()
+
     return (
         <>
             <nav className="navbar pos-stick flex jc-center a-item-center">
@@ -28,10 +32,12 @@ const Navbar = () => {
                     </div>
                     <div className="navbar--container-end flex a-item-center">
                         <div className="nav-icon-container">
-                            <div className="nav-heart-icon">
+                            <div className="nav-heart-icon pos-rel">
                                 <Link to="/cart">
                                     <FontAwesomeIcon icon={faShoppingCart} className="nav__icons" />
+                                    {state_Cart.cart.length === 0 || <span className="badge badge-danger">{state_Cart.cart.length}</span>}
                                 </Link>
+
                             </div>
                         </div>
 

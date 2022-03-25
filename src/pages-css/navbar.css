@@ -135,6 +135,13 @@
   }
 }
 
+.badge-danger {
+  font-size: 1rem;
+  font-weight: bold;
+  top: -1rem;
+  right: -1rem;
+}
+
 @media screen and (max-width: 450px) {
   .navbar--container-middle {
     display: none;

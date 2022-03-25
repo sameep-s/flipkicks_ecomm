@@ -20,10 +20,7 @@ export const FilterReducer = (state, action) => {
                 brandCopy.splice(state.brand.indexOf(action.payload), 1);
                 return { ...state, brand: brandCopy }
             }
-            else {
-                return { ...state, brand: [...state.brand, action.payload] }
-
-            }
+            else { return { ...state, brand: [...state.brand, action.payload] } }
 
         case "size":
             if (state.size.includes(action.payload)) {
@@ -32,9 +29,7 @@ export const FilterReducer = (state, action) => {
                 return { ...state, size: sizeCopy }
             }
             else {
-                return {
-                    ...state, size: [...state.size, action.payload]
-                }
+                return { ...state, size: [...state.size, action.payload] }
             }
 
         case "reset":
