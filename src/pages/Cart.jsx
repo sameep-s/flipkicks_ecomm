@@ -8,7 +8,6 @@ const Cart = () => {
 
     const { state_Cart } = useCart();
     const cartItems = state_Cart.cart;
-    console.log(`cartItems:cart.jsx`, cartItems);
 
     const getCheckoutDetails = (items) => {
         const { priceTotal, itemsTotal } = items.reduce((acc, cur) => {
