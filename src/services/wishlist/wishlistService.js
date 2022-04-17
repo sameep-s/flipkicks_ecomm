@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const addToWishlist = (dispatch_Wishlist, product, token) => {
+export const addToWishlist = async (dispatch_Wishlist, product, token) => {
     try {
         (() => {
             const { data: { wishlist } } = axios.post("api/user/wishlist", {
@@ -21,7 +21,7 @@ export const addToWishlist = (dispatch_Wishlist, product, token) => {
     }
 }
 
-export const removeFromWishlist = (dispatch_Wishlist, id, token) => {
+export const removeFromWishlist = async (dispatch_Wishlist, id, token) => {
     try {
         (() => {
             const { data: { wishlist } } = axios.delete(`api/user/wishlist/${id}`,

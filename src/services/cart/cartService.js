@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-export const addToCart = (dispatch_Cart, product, token) => {
+export const addToCart = async (dispatch_Cart, product, token) => {
     try {
         const { data: { cart } } = await axios.post('/api/user/cart', {
             product
@@ -20,7 +20,7 @@ export const addToCart = (dispatch_Cart, product, token) => {
 }
 
 
-export const removeFromCart = (dispatch_Cart, id, token) => {
+export const removeFromCart = async (dispatch_Cart, id, token) => {
     try {
         const { data: { cart } } = await axios.delete(`/api/user/cart/${id}`,
             {
