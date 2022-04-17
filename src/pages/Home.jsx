@@ -3,6 +3,7 @@ import '../pages-css/main.css';
 import Navbar from "./Navbar";
 import BannerHome from './BannerHome';
 import BannerHomeHalf from './BannerHomeHalf';
+import { Footer } from '../components';
 
 const Home = () => {
     return (
@@ -52,12 +53,7 @@ const Home = () => {
                     />
 
                 </div>
-
-
-                <footer className="home-footer flex jc-center a-item-center">
-                    CHOOSE YOUR KICKS @ FlipKicks
-                </footer>
-
+                <Footer />
             </main>
 
         </>

@@ -1,10 +1,13 @@
 import React from 'react';
 import '../pages-css/main.css';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
+import { Footer } from '../components';
 
 const Signup = () => {
     return (
         <>
+            <Navbar />
             <main className="container-main">
                 <form action="" className="form-wrapper">
                     <div className="form-heading">Sign Up</div>
@@ -53,6 +56,15 @@ const Signup = () => {
                             autoComplete="off"
                             placeholder="Last Name"
                         />
+
+                        <input
+                            type="number"
+                            name=""
+                            id="age"
+                            className="form-input mt-2"
+                            autoComplete="off"
+                            placeholder="Enter your age in years"
+                        />
                     </div>
 
                     <div className="form-utility mt-2">
@@ -79,7 +91,7 @@ const Signup = () => {
                     </div>
                 </form>
             </main>
-
+            <Footer />
         </>
     )
 }

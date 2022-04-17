@@ -9,6 +9,7 @@ import Wishlist from './pages/Wishlist';
 import ProductList from './pages/ProductList';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import { Footer } from './components/index';
 
 function App() {
 

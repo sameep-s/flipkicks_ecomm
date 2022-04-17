@@ -14,9 +14,11 @@
 
 .content-wrapper-wishlist {
   width: 80%;
+  height: 100vh;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
+  overflow-y: scroll;
   justify-content: flex-start;
   background-color: white;
 }

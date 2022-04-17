@@ -1,12 +1,13 @@
 import React from 'react';
 import '../pages-css/main.css';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
+import { Footer } from '../components/index';
 
 const Login = () => {
     return (
         <>
-
-
+            <Navbar />
             <main className="container-main">
                 <form action="" className="form-wrapper">
                     <div className="form-heading">Welcome Back</div>
@@ -53,10 +54,11 @@ const Login = () => {
                     </div>
 
                     <div className="form-end form-utility mt-1">
-                        Not a Member? <Link to="/signup" className="form-link">Sign in.</Link>
+                        Not a Member? <Link to="/signup" className="form-link">Sign Up.</Link>
                     </div>
                 </form>
             </main>
+            <Footer />
         </>
     )
 }

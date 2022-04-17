@@ -1,4 +1,5 @@
 import React from 'react';
+import '../pages-css/props.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from '../util_Contexts';
