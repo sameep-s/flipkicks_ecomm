@@ -1,4 +1,4 @@
-# SickVids__VideoLibrary ![image](https://user-images.githubusercontent.com/36707002/155007360-7270456b-b6a3-415a-8182-71ab6c3e28c6.png) ![image](https://user-images.githubusercontent.com/36707002/155007376-d69b719a-f92e-4bf0-94c2-cab86ead7cef.png)
+# FlipKIcks__EcommStore ![image](https://user-images.githubusercontent.com/36707002/155007360-7270456b-b6a3-415a-8182-71ab6c3e28c6.png) ![image](https://user-images.githubusercontent.com/36707002/155007376-d69b719a-f92e-4bf0-94c2-cab86ead7cef.png)
 
 
 FlipKicks is a online Sneaker Store where you can find the latest and rarest senakers.
@@ -12,7 +12,7 @@ FlipKicks is a online Sneaker Store where you can find the latest and rarest sen
 Copy and paste the below command into you terminal in a desired repository to run this app locally.
 
 ```bash
-https://github.com/sameep-s/sickVids_videoLibrary.git
+https://github.com/sameep-s/flipkicks_ecomm.git
 ```
 
 # Features
@@ -22,7 +22,7 @@ https://github.com/sameep-s/sickVids_videoLibrary.git
   <li>Different Categories of Shoes Are Listed Here.</li>
 </ul>
 
-# Video Listing Page
+# Product Listing Page
 <ul>
   <li>All Videos Are Listed Here.</li>
 </ul>
@@ -35,35 +35,38 @@ https://github.com/sameep-s/sickVids_videoLibrary.git
   <li>Persistant Login</li>
 </ul>
 
-# History
+# Filters
 <ul>
-  <li>Add To history</li>
-  <li>Remove From History</li>
-  <li>CLear History</li>
+  <li>Sort By Price (Low and High)</li>
+  <li>Filter by price range</li>
+  <li>Filter By Brand</li>
+  <li>Filter By Size</li>
+  <li>Clear Filters</li>
 </ul>
 
-# Like
+# WishList
 <ul>
-  <li>Add video to liked</li>
-  <li>Remove Video From Liked</li>
+  <li>Add products to Wishlist</li>
+  <li>Remove products from Wishlist</li>
 </ul>
 
-# Playlist
+# Cart
 <ul>
-  <li>Create Playlist</li>
-  <li>Delete Playlist</li>
-  <li>Add To Playlist</li>
-  <li>Remove From Playlist</li>
-</ul>
-
-# WatchLater
-<ul>
-  <li>Add To Watch Later</li>
-  <li>Remove From Watch Later</li>
-  <li>Clear Watch Later</li>
+  <li>Add To Cart</li>
+  <li>Remove From Cart</li>
+  <li>Update Quantity(increase & decreacse)</li>
+  <li>Dynamic Pricing</li>
 </ul>
 
 
 # Screenshots
 
 
+![Screenshot (142)](https://user-images.githubusercontent.com/36707002/163735855-3f0236eb-8c0b-4023-8a73-41c502d7e770.png)
+![Screenshot (143)](https://user-images.githubusercontent.com/36707002/163735858-b4af491f-af3f-4a4d-9408-303223238e5c.png)
+![Screenshot (144)](https://user-images.githubusercontent.com/36707002/163735860-b95d781a-1be1-4721-85c8-4b0143b3d9e7.png)
+![Screenshot (145)](https://user-images.githubusercontent.com/36707002/163735861-22db0b9c-fbb2-4be6-8579-7e97aa4ba56f.png)
+![Screenshot (146)](https://user-images.githubusercontent.com/36707002/163735862-63ff52ae-ef04-4d7e-888e-6217e00d2262.png)
+![Screenshot (147)](https://user-images.githubusercontent.com/36707002/163735863-c5363e04-f09b-4f0e-b1eb-37a32155e19c.png)
+![Screenshot (148)](https://user-images.githubusercontent.com/36707002/163735864-8f05df4f-f15e-4b4a-b668-d281a3f1fdc4.png)
+![Screenshot (149)](https://user-images.githubusercontent.com/36707002/163735865-49d4ac2e-38a4-4599-b2c6-5fd89c331f1c.png)
