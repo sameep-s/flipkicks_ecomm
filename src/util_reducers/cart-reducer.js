@@ -1,7 +1,6 @@
 
 export const CartReducer = (state_Cart, action_Cart) => {
     const { cart } = state_Cart
-    console.log(cart);
 
     const isPresent = cart?.filter((item) => item._id === action_Cart.payload._id).length === 0 ? false : true;
 

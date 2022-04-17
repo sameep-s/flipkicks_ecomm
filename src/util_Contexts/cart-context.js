@@ -1,10 +1,9 @@
 import { createContext, useContext, useReducer } from "react";
 import { CartReducer } from "../util_reducers/cart-reducer";
 
-
-
 const defaultCartContextValue = [{ products: "none" }]
 const CartContext = createContext(defaultCartContextValue);
+
 
 const CartProvider = ({ children }) => {
 
@@ -21,11 +20,7 @@ const CartProvider = ({ children }) => {
     );
 }
 
-
-
 const useCart = () => useContext(CartContext);
-
-
 
 export { CartProvider, useCart };
 

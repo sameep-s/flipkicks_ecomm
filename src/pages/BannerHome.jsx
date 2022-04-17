@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 
 const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
 
-
-
     return (
         <>
 

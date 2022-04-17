@@ -2,14 +2,25 @@ import React from 'react';
 import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../util_Contexts';
 import { useWishlist } from '../util_Contexts/wishlist-context';
+import { useAuth } from '../util_Contexts/auth-context';
 
 const Navbar = () => {
 
     const { state_Cart: { cart } } = useCart()
+    const { user, setUser } = useAuth();
     const { state_Wishlist: { wishlist } } = useWishlist();
+
+    const navigate = useNavigate();
+
+    function logOutHandler() {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        setUser(null);
+        navigate('/', { replace: true });
+    }
 
     return (
         <>
@@ -53,9 +64,15 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <Link to="/login" className="btn-nav jc-center a-item-center"
-                        >Login
-                        </Link>
+
+                        {user ?
+                            <button
+                                onClick={() => logOutHandler()}
+                                className="btn-nav jc-center a-item-center">Log Out</button>
+                            :
+                            <Link to="/login" className="btn-nav jc-center a-item-center">Login
+                            </Link>
+                        }
                     </div>
                 </div>
             </nav>

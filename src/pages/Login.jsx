@@ -1,31 +1,76 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../pages-css/main.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
+import { Footer } from '../components/index';
+import { useAuth } from '../util_Contexts/auth-context';
 
 const Login = () => {
+
+
+    const [loginFormData, setLoginFormData] = useState({ email: "", password: "" });
+    const { user, loginUser } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (user) {
+            navigate(location?.state?.from || '/products', { replace: true });
+        }
+    }, [user]);
+
+
+
+    const loginHandler = () => {
+        if (loginFormData.email && loginFormData.password === "") {
+            alert("Please Fill out form correctly");
+            return;
+        }
+
+        loginUser(loginFormData.email, loginFormData.password);
+        if (user) {
+            navigate("/", { replace: true });
+        }
+
+        setLoginFormData(() => ({ email: "", password: "" }));
+    }
+
+    const testLoginHandler = () => {
+        loginUser("sam@gmail.com", "p123");
+        setLoginFormData(() => ({ email: "", password: "" }));
+    }
+
+
+
+
     return (
         <>
-
-
+            <Navbar />
             <main className="container-main">
-                <form action="" className="form-wrapper">
+                <form onSubmit={(e) => e.preventDefault()} className="form-wrapper">
                     <div className="form-heading">Welcome Back</div>
                     <div className="form-body">
                         <label htmlFor="email" className="form-label mt-3">Enter your Email.</label>
                         <input
                             type="text"
                             name=""
+                            value={loginFormData.email}
+                            onChange={(e) => setLoginFormData(() =>
+                                ({ ...loginFormData, email: e.target.value }))}
                             id="email"
                             className="form-input mt-1"
                             autoComplete="off"
                         />
 
-                        <label htmlFor="password" className="form-label mt-3"
-                        >Enter your password</label
-                        >
+                        <label htmlFor="password" className="form-label mt-3">
+                            Enter your password</label>
                         <input
                             type="password"
                             name=""
+                            value={loginFormData.password}
+                            onChange={(e) =>
+                                setLoginFormData(() =>
+                                    ({ ...loginFormData, password: e.target.value }))}
                             id="password"
                             className="form-input mt-1"
                             autoComplete="off"
@@ -35,9 +80,8 @@ const Login = () => {
                     <div className="form-utility mt-2">
                         <div className="form-utility-1 flex a-item-center">
                             <input type="checkbox" id="remembercheck" className="form-checkbox" />
-                            <label htmlFor="remembercheck " className="form-check ml-1"
-                            >Remember Me</label
-                            >
+                            <label htmlFor="remembercheck " className="form-check ml-1">Remember Me
+                            </label>
 
                             <a href="" className="forgot-pwrd">Forgot Password?</a>
                         </div>
@@ -49,14 +93,16 @@ const Login = () => {
                     </div>
 
                     <div className="from-button mt-3">
-                        <button className="btn-sq btn-light">Login</button>
+                        <button type='button' onClick={() => loginHandler()} className="btn-sq btn-light">Login</button>
+                        <button type='button' onClick={() => testLoginHandler()} className="btn-sq btn-light mt-1">Test Login</button>
                     </div>
 
                     <div className="form-end form-utility mt-1">
-                        Not a Member? <Link to="/signup" className="form-link">Sign in.</Link>
+                        Not a Member? <Link to="/signup" className="form-link">Sign Up.</Link>
                     </div>
                 </form>
             </main>
+            <Footer />
         </>
     )
 }

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import '../pages-css/props.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from '../util_Contexts';
 import { useWishlist } from '../util_Contexts/wishlist-context';
+import { useAuth } from '../util_Contexts/auth-context';
+import { useNavigate } from 'react-router-dom';
 
 
 const CardProduct = (product) => {
@@ -11,6 +14,25 @@ const CardProduct = (product) => {
 
     const { state_Cart: { cart }, dispatch_Cart } = useCart()
     const { state_Wishlist: { wishlist }, dispatch_Wishlist } = useWishlist();
+
+    const { user } = useAuth();
+    const navigate = useNavigate();
+
+    function addToCartHandler() {
+        user
+            ?
+            dispatch_Cart({ type: "ADD_TO_CART", payload: product })
+            :
+            navigate('/login', { replace: true })
+    }
+
+    function addToWishlistHandler() {
+        user
+            ?
+            dispatch_Wishlist({ type: "ADD_TO_WISHLIST", payload: product })
+            :
+            navigate('/login', { replace: true })
+    }
 
     return (
         <>
@@ -29,13 +51,13 @@ const CardProduct = (product) => {
                     </div>
 
                     <div className="pList-card-price mt-1">{price}</div>
-                    <button className="pList-card-btn" onClick={() => dispatch_Cart({ type: "ADD_TO_CART", payload: product })}>
+                    <button className="pList-card-btn" onClick={() => addToCartHandler()}>
                         {cart.filter(item => item._id === product._id).length === 1 ? "Addded To Cart" : "BUY"}
                     </button>
                 </div>
 
 
-                <div className="pList-card-badge pos-abs " onClick={() => dispatch_Wishlist({ type: "ADD_TO_WISHLIST", payload: product })}>
+                <div className="pList-card-badge pos-abs " onClick={() => addToWishlistHandler()}>
                     <FontAwesomeIcon
                         icon={faHeart}
                         className={wishlist.filter(item => item._id === product._id).length === 1 ? "card-icon-heart card-icon-liked" : "card-icon-heart"} />

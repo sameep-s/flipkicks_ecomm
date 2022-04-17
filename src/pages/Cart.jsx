@@ -1,4 +1,5 @@
 import React from 'react';
+import { Footer } from '../components';
 import '../pages-css/cart.css';
 import { useCart } from '../util_Contexts';
 import CardCart from './CardCart';
@@ -35,8 +36,9 @@ const Cart = () => {
                 <div className="cart-heading">My Cart({cartItems.length})</div>
                 {cartItems.length === 0 ?
 
-                    <h1>You Don't have any items in Cart</h1>
-
+                    <div className="content-wrapper-cart">
+                        <h1>You Don't have any items in Cart</h1>
+                    </div>
                     :
 
                     <div className="content-wrapper-cart">
@@ -75,9 +77,8 @@ const Cart = () => {
                     </div>
 
                 }
-
-                {/* <footer className="home-footer">CHOOSE YOUR KICKS @ FlipKicks</footer>  */}
             </main>
+            <Footer />
         </>
     )
 }

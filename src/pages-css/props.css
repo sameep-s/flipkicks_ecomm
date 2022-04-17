@@ -3,6 +3,7 @@
 .pList-card-wrapper {
   display: flex;
   width: 25rem;
+  height:50rem;
   margin: 0 5rem 3rem 0;
   flex-direction: column;
   justify-content: center;
