@@ -16,7 +16,6 @@ const AuthProvider = ({ children }) => {
             const { data: { foundUser, encodedToken }, status } = await loginService(email, password);
 
             if (status === 200) {
-                console.log(`login`, status);
                 localStorage.setItem("token", JSON.stringify(encodedToken));
                 localStorage.setItem("user", JSON.stringify(foundUser));
                 setEncodedToken(encodedToken);
@@ -30,7 +29,6 @@ const AuthProvider = ({ children }) => {
     const signupUser = async (email, password, confirmPassword, firstName, lastName, age) => {
         try {
             const { status, data: { encodedToken, createdUser } } = await signupService(email, password, confirmPassword, firstName, lastName, age);
-            console.log(`signUp`, status);
             if (status === 201) {
                 localStorage.setItem('token', JSON.stringify(encodedToken));
                 localStorage.setItem("user", JSON.stringify(createdUser));

@@ -16,7 +16,6 @@ const CardProduct = (product) => {
     const { state_Wishlist: { wishlist }, dispatch_Wishlist } = useWishlist();
 
     const { user } = useAuth();
-    console.log(user);
     const navigate = useNavigate();
 
     function addToCartHandler() {

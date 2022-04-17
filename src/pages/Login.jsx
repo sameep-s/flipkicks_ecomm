@@ -62,9 +62,8 @@ const Login = () => {
                             autoComplete="off"
                         />
 
-                        <label htmlFor="password" className="form-label mt-3"
-                        >Enter your password</label
-                        >
+                        <label htmlFor="password" className="form-label mt-3">
+                            Enter your password</label>
                         <input
                             type="password"
                             name=""
@@ -81,9 +80,8 @@ const Login = () => {
                     <div className="form-utility mt-2">
                         <div className="form-utility-1 flex a-item-center">
                             <input type="checkbox" id="remembercheck" className="form-checkbox" />
-                            <label htmlFor="remembercheck " className="form-check ml-1"
-                            >Remember Me</label
-                            >
+                            <label htmlFor="remembercheck " className="form-check ml-1">Remember Me
+                            </label>
 
                             <a href="" className="forgot-pwrd">Forgot Password?</a>
                         </div>
