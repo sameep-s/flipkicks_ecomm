@@ -125,7 +125,7 @@ const Signup = () => {
                     </div>
 
                     <div className="from-button mt-3">
-                        <button className="btn-sq btn-light">Join Us</button>
+                        <button onClick={() => signupHandler()} className="btn-sq btn-light">Join Us</button>
                     </div>
 
                     <div className="form-end form-utility mt-1">

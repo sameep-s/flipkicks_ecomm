@@ -77,8 +77,6 @@ const Cart = () => {
                     </div>
 
                 }
-
-                {/* <footer className="home-footer">CHOOSE YOUR KICKS @ FlipKicks</footer>  */}
             </main>
             <Footer />
         </>
