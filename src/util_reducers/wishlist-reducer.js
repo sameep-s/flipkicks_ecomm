@@ -1,7 +1,6 @@
 export const WishlistReducer = (state_Wishlist, action_Wishlist) => {
 
     const { wishlist } = state_Wishlist;
-    console.log(`wishlist:`, wishlist);
 
     switch (action_Wishlist.type) {
         case "ADD_TO_WISHLIST":
