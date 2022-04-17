@@ -1,20 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../pages-css/main.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import { Footer } from '../components';
+import { useAuth } from '../util_Contexts/auth-context';
 
 const Signup = () => {
+
+    const [signupFormData, setSignupFormData] = useState({
+        email: "",
+        password: "",
+        confirmPassword: "",
+        firstName: "",
+        lastName: "",
+        age: ""
+    })
+
+    const { user, signupUser } = useAuth();
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if (user) {
+            navigate('/products', { replace: true });
+        }
+    }, [user])
+
+    const signupHandler = () => {
+        const { email, password, confirmPassword, firstName, lastName, age } = signupFormData;
+        signupUser(email, password, confirmPassword, firstName, lastName, age)
+    }
+
     return (
         <>
             <Navbar />
             <main className="container-main">
-                <form action="" className="form-wrapper">
+                <form onSubmit={(e) => {
+                    e.preventDefault();
+                    signupHandler();
+                }}
+                    className="form-wrapper"
+                >
                     <div className="form-heading">Sign Up</div>
                     <div className="form-body">
                         <input
                             type="text"
                             name=""
+                            value={signupFormData.email}
+                            onChange={(e) => setSignupFormData(() => ({ ...signupFormData, email: e.target.value }))}
                             id="email"
                             className="form-input mt-4"
                             autoComplete="off"
@@ -24,6 +57,8 @@ const Signup = () => {
                         <input
                             type="password"
                             name=""
+                            value={signupFormData.password}
+                            onChange={(e) => setSignupFormData({ ...signupFormData, password: e.target.value })}
                             id="password"
                             className="form-input mt-2"
                             autoComplete="off"
@@ -33,6 +68,8 @@ const Signup = () => {
                         <input
                             type="password"
                             name=""
+                            value={signupFormData.confirmPassword}
+                            onChange={(e) => setSignupFormData({ ...signupFormData, confirmPassword: e.target.value })}
                             id="confirm-password"
                             className="form-input mt-2"
                             autoComplete="off"
@@ -42,6 +79,8 @@ const Signup = () => {
                         <input
                             type="text"
                             name=""
+                            value={signupFormData.firstName}
+                            onChange={(e) => setSignupFormData({ ...signupFormData, firstName: e.target.value })}
                             id="fname"
                             className="form-input mt-2"
                             autoComplete="off"
@@ -51,6 +90,8 @@ const Signup = () => {
                         <input
                             type="text"
                             name=""
+                            value={signupFormData.lastName}
+                            onChange={(e) => setSignupFormData({ ...signupFormData, lastName: e.target.value })}
                             id="lastName"
                             className="form-input mt-2"
                             autoComplete="off"
@@ -60,6 +101,8 @@ const Signup = () => {
                         <input
                             type="number"
                             name=""
+                            value={signupFormData.age}
+                            onChange={(e) => setSignupFormData({ ...signupFormData, age: e.target.value })}
                             id="age"
                             className="form-input mt-2"
                             autoComplete="off"
