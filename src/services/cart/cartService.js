@@ -37,7 +37,7 @@ export const removeFromCart = async (dispatch_Cart, id, token) => {
 }
 
 
-export const updateQtyCart = (dispatch_Cart, id, action, token) => {
+export const updateQtyCart = async (dispatch_Cart, id, action, token) => {
     try {
         const { data: { cart } } = await axios.post(`api/user/cart/${id}`,
             {
