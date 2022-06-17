@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CardProduct = (product) => {
 
-    const { image, title, author, price } = product;
+    const { image, title, productName, price } = product;
 
     const { state_Cart: { cart }, dispatch_Cart } = useCart()
     const { state_Wishlist: { wishlist }, dispatch_Wishlist } = useWishlist();
@@ -44,7 +44,7 @@ const CardProduct = (product) => {
 
                 <div className="pList-card-body">
                     <div className="pList-card-title mt-1">
-                        {author}
+                        {productName}
                     </div>
                     <div className="pList-card-subtitle mt-1 txt-gray">
                         {title}
