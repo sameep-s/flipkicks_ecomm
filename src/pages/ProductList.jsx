@@ -23,7 +23,7 @@ const ProductList = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar search />
 
             <main className="main-container-pList">
                 <div className="content-wrap-pList">

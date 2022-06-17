@@ -7,7 +7,7 @@ import { useCart } from '../util_Contexts';
 import { useWishlist } from '../util_Contexts/wishlist-context';
 import { useAuth } from '../util_Contexts/auth-context';
 
-const Navbar = () => {
+const Navbar = ({ search }) => {
 
     const { state_Cart: { cart }, dispatch_Cart } = useCart()
     const { user, setUser } = useAuth();
@@ -33,18 +33,23 @@ const Navbar = () => {
                             <div className="brand-name">FlipKicks</div>
                         </Link>
                     </div>
-                    <div className="navbar--container-middle flex a-item-center">
-                        <button className="btn-search-nav">
-                            <FontAwesomeIcon icon={faMagnifyingGlass} className="nav__icon_magnifying" ></FontAwesomeIcon>
-                        </button>
-                        <input
-                            className="input-dark"
-                            type="text"
-                            name=""
-                            id=""
-                            placeholder="search"
-                        />
-                    </div>
+
+                    {
+                        search
+                        &&
+                        <div className="navbar--container-middle flex a-item-center">
+                            <button className="btn-search-nav">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} className="nav__icon_magnifying" ></FontAwesomeIcon>
+                            </button>
+                            <input
+                                className="input-dark"
+                                type="text"
+                                name=""
+                                id=""
+                                placeholder="search"
+                            />
+                        </div>
+                    }
                     <div className="navbar--container-end flex a-item-center">
                         <div className="nav-icon-container">
                             <div className="nav-heart-icon pos-rel">
