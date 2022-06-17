@@ -10,7 +10,8 @@ const FilterProvider = ({ children }) => {
         sortBy: null,
         rangeValue: 0,
         brand: [],
-        size: []
+        size: [],
+        searchVal: ""
     });
 
     return (

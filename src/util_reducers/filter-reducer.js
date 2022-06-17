@@ -32,6 +32,9 @@ export const FilterReducer = (state, action) => {
                 return { ...state, size: [...state.size, action.payload] }
             }
 
+        case "SEARCH":
+            return { ...state, searchVal: action.payload.searchVal };
+
         case "reset":
             return defaultState;
 

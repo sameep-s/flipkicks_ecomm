@@ -5,12 +5,13 @@ import Filters from './Filters';
 import CardProduct from './CardProduct';
 import { useFilter, useProducts } from '../util_Contexts/';
 import { dataFilterBrands, getFilteredDataPrice, getFilteredDataSize, getSortedProducts } from '../util_fucntions/';
+import { filterSearch } from '../util_fucntions/searchFilterProducts';
 
 
 const ProductList = () => {
 
     const { state } = useFilter();
-    const { sortBy, rangeValue, brand, size } = state;
+    const { sortBy, rangeValue, brand, size, searchVal } = state;
 
     const { state_Products } = useProducts();
     const productList = [...state_Products.products];
@@ -18,7 +19,8 @@ const ProductList = () => {
     const sortedData = getSortedProducts(productList, sortBy);
     const filteredDataBrands = dataFilterBrands(sortedData, brand);
     const filteredDataSize = getFilteredDataSize(filteredDataBrands, size);
-    const filteredDataPrice = getFilteredDataPrice(filteredDataSize, rangeValue)
+    const filteredDataPrice = getFilteredDataPrice(filteredDataSize, rangeValue);
+    const filteredDataSearch = filterSearch(filteredDataPrice, searchVal);
 
 
     return (
@@ -34,7 +36,7 @@ const ProductList = () => {
                             <div className="main-pList-heading">Showing All Products</div>
                             <div className="vert-space"></div>
                             <div className="main-card-area">
-                                {filteredDataPrice?.map((product) => <CardProduct key={product._id} {...product} />)}
+                                {filteredDataSearch?.map((product) => <CardProduct key={product._id} {...product} />)}
                             </div>
                         </div>
                     </div>

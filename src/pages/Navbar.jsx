@@ -3,12 +3,14 @@ import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from 'react-router-dom';
-import { useCart } from '../util_Contexts';
+import { useCart, useFilter } from '../util_Contexts';
 import { useWishlist } from '../util_Contexts/wishlist-context';
 import { useAuth } from '../util_Contexts/auth-context';
+import { debounce } from '../util_fucntions/searchFilterProducts';
 
 const Navbar = ({ search }) => {
 
+    const { state, dispatch } = useFilter();
     const { state_Cart: { cart }, dispatch_Cart } = useCart()
     const { user, setUser } = useAuth();
     const { state_Wishlist: { wishlist }, dispatch_Wishlist } = useWishlist();
@@ -23,6 +25,8 @@ const Navbar = ({ search }) => {
         dispatch_Wishlist({ type: "CLEAR_WISHLIST" });
         navigate('/', { replace: true });
     }
+
+    const searchProductsHandler = debounce((e) => dispatch({ type: "SEARCH", payload: { searchVal: e.target.value } }))
 
     return (
         <>
@@ -44,9 +48,10 @@ const Navbar = ({ search }) => {
                             <input
                                 className="input-dark"
                                 type="text"
-                                name=""
-                                id=""
+                                name="Search"
+                                id="Search"
                                 placeholder="search"
+                                onChange={(e) => searchProductsHandler(e)}
                             />
                         </div>
                     }
