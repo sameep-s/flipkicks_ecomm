@@ -1,19 +1,20 @@
 
 export const CartReducer = (state_Cart, action_Cart) => {
-    const { cart } = state_Cart
+    const { cart } = state_Cart;
+    console.log(state_Cart);
 
-    const isPresent = cart?.filter((item) => item._id === action_Cart.payload._id).length === 0 ? false : true;
+    const isPresent = () => cart?.filter((item) => item._id === action_Cart.payload._id).length === 0 ? false : true;
 
     switch (action_Cart.type) {
 
         case "ADD_TO_CART":
-            if (isPresent)
+            if (isPresent())
                 return { cart: [...cart] }
 
             return { cart: [...cart, { ...action_Cart.payload, qty: 1 }] }
 
-        case "REMOVE_FROM_CART":
-            return { cart }
+        case "CLEAR_CART":
+            return { ...state_Cart, cart: [] }
 
         case "ADD_ITEM_QTY":
             return {

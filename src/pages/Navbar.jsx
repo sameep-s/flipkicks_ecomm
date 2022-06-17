@@ -9,9 +9,9 @@ import { useAuth } from '../util_Contexts/auth-context';
 
 const Navbar = () => {
 
-    const { state_Cart: { cart } } = useCart()
+    const { state_Cart: { cart }, dispatch_Cart } = useCart()
     const { user, setUser } = useAuth();
-    const { state_Wishlist: { wishlist } } = useWishlist();
+    const { state_Wishlist: { wishlist }, dispatch_Wishlist } = useWishlist();
 
     const navigate = useNavigate();
 
@@ -19,6 +19,8 @@ const Navbar = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         setUser(null);
+        dispatch_Cart({ type: "CLEAR_CART" });
+        dispatch_Wishlist({ type: "CLEAR_WISHLIST" });
         navigate('/', { replace: true });
     }
 
@@ -48,7 +50,7 @@ const Navbar = () => {
                             <div className="nav-heart-icon pos-rel">
                                 <Link to="/cart">
                                     <FontAwesomeIcon icon={faShoppingCart} className="nav__icons" />
-                                    {cart.length === 0 || <div className="badge badge-danger">{cart.length}</div>}
+                                    {cart?.length === 0 || <div className="badge badge-danger">{cart?.length}</div>}
                                 </Link>
 
                             </div>
@@ -59,7 +61,7 @@ const Navbar = () => {
                                 <Link to="/wishlist">
                                     <FontAwesomeIcon icon={faHeart} className="nav__icons" ></FontAwesomeIcon>
                                     <div className="fa-solid fa-cart-shopping" id="cart-icon"></div>
-                                    {wishlist.length === 0 || <div className="badge badge-danger">{wishlist.length}</div>}
+                                    {wishlist?.length === 0 || <div className="badge badge-danger">{wishlist?.length}</div>}
                                 </Link>
                             </div>
                         </div>
@@ -67,10 +69,11 @@ const Navbar = () => {
 
                         {user ?
                             <button
-                                onClick={() => logOutHandler()}
+                                onClick={logOutHandler}
                                 className="btn-nav jc-center a-item-center">Log Out</button>
                             :
-                            <Link to="/login" className="btn-nav jc-center a-item-center">Login
+                            <Link to="/login" className="btn-nav jc-center a-item-center">
+                                Login
                             </Link>
                         }
                     </div>
