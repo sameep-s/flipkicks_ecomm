@@ -71,7 +71,7 @@ const Cart = () => {
                                     <div className="order-total-value">${totalAmount}</div>
                                 </div>
 
-                                <button className="btn-sq btn-dark">PLACE ORDER</button>
+                                <button className="btn-sq btn-dark">PROCEED TO CHECKOUT</button>
                             </div>
                         </div>
                     </div>

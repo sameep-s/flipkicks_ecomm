@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faShoppingCart, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart, useFilter } from '../util_Contexts';
 import { useWishlist } from '../util_Contexts/wishlist-context';
@@ -56,13 +56,21 @@ const Navbar = ({ search }) => {
                         </div>
                     }
                     <div className="navbar--container-end flex a-item-center">
+
+                        <div className="nav-icon-container">
+                            <div className="nav-heart-icon pos-rel">
+                                <Link to="/">
+                                    <FontAwesomeIcon icon={faUser} className="nav__icons" />
+                                </Link>
+                            </div>
+                        </div>
+
                         <div className="nav-icon-container">
                             <div className="nav-heart-icon pos-rel">
                                 <Link to="/cart">
                                     <FontAwesomeIcon icon={faShoppingCart} className="nav__icons" />
                                     {cart?.length === 0 || <div className="badge badge-danger">{cart?.length}</div>}
                                 </Link>
-
                             </div>
                         </div>
 
