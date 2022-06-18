@@ -1,12 +1,9 @@
 import React from 'react';
+import './addresses.css';
 import { Footer, ProfileSidebar } from '../../components';
 import Navbar from '../Navbar';
-import './profile.css';
 
-const Profile = () => {
-
-
-
+const Addresses = () => {
     return (
         <>
             <Navbar />
@@ -22,7 +19,7 @@ const Profile = () => {
             </main >
             <Footer />
         </>
-    );
+    )
 }
 
-export default Profile;
+export default Addresses

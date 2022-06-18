@@ -21,13 +21,18 @@ const ProfileSidebar = () => {
                     </div>
                 </NavLink>
 
-                <div className="profile__sidebarItem">
-                    Orders
-                </div>
+                <NavLink to='/orders' style={styleActiveNav}>
+                    <div className="profile__sidebarItem">
+                        Orders
+                    </div>
+                </NavLink>
 
-                <div className="profile__sidebarItem">
-                    Addresses
-                </div>
+                <NavLink to='/address' style={styleActiveNav}>
+                    <div className="profile__sidebarItem">
+                        Addresses
+                    </div>
+                </NavLink>
+
 
                 <div className="profile__sidebarItem red">
                     Logout

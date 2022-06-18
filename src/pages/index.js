@@ -6,6 +6,8 @@ import Wishlist from "./Wishlist";
 import Navbar from "./Navbar";
 import Cart from "./Cart";
 import Profile from "./Profile/Profile";
+import Addresses from "./Addresses/Addresses";
+import Orders from "./Orders/Orders";
 
 
 export {
@@ -16,5 +18,7 @@ export {
     Navbar,
     ProductList,
     Wishlist,
-    Profile
+    Profile,
+    Addresses,
+    Orders
 };

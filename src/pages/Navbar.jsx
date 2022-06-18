@@ -1,7 +1,7 @@
 import React from 'react';
 import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faShoppingCart, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faShoppingCart, faHeart, faUser, faHome } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart, useFilter } from '../util_Contexts';
 import { useWishlist } from '../util_Contexts/wishlist-context';
@@ -86,14 +86,16 @@ const Navbar = ({ search }) => {
 
 
                         {user ?
-                            <button
-                                onClick={logOutHandler}
-                                className="btn-nav jc-center a-item-center">Log Out</button>
+                            <Link to='/products'>
+                                <FontAwesomeIcon icon={faHome} className="nav__home" ></FontAwesomeIcon>
+                            </Link>
+
                             :
                             <Link to="/login" className="btn-nav jc-center a-item-center">
                                 Login
                             </Link>
                         }
+
                     </div>
                 </div>
             </nav>

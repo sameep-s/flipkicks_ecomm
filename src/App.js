@@ -11,7 +11,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { RequireAuth } from './components';
 import Checkout from './pages/Checkout/Checkout';
-import { Profile } from './pages';
+import { Addresses, Orders, Profile } from './pages';
 
 function App() {
   return (
@@ -28,6 +28,8 @@ function App() {
         <Route path='/wishlist' element={<RequireAuth><Wishlist /></RequireAuth>} />
         <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
         <Route path='/profile' element={<RequireAuth> <Profile /> </RequireAuth>} />
+        <Route path='/address' element={<RequireAuth> <Addresses /> </RequireAuth>} />
+        <Route path='/orders' element={<RequireAuth> <Orders /> </RequireAuth>} />
 
 
       </Routes>

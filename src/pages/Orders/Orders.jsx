@@ -1,13 +1,12 @@
 import React from 'react';
+import './orders.css';
 import { Footer, ProfileSidebar } from '../../components';
 import Navbar from '../Navbar';
-import './profile.css';
-
-const Profile = () => {
 
 
-
+const Orders = () => {
     return (
+
         <>
             <Navbar />
             <main className="container__main__profile flex jc-center a-item-center">
@@ -22,7 +21,7 @@ const Profile = () => {
             </main >
             <Footer />
         </>
-    );
+    )
 }
 
-export default Profile;
+export default Orders
