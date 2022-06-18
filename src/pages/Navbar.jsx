@@ -2,7 +2,7 @@ import React from 'react';
 import '../pages-css/main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faShoppingCart, faHeart, faUser, faHome } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useCart, useFilter } from '../util_Contexts';
 import { useWishlist } from '../util_Contexts/wishlist-context';
 import { useAuth } from '../util_Contexts/auth-context';
@@ -10,21 +10,11 @@ import { debounce } from '../util_fucntions/searchFilterProducts';
 
 const Navbar = ({ search }) => {
 
-    const { state, dispatch } = useFilter();
-    const { state_Cart: { cart }, dispatch_Cart } = useCart()
-    const { user, setUser } = useAuth();
-    const { state_Wishlist: { wishlist }, dispatch_Wishlist } = useWishlist();
+    const { dispatch } = useFilter();
+    const { state_Cart: { cart } } = useCart()
+    const { user } = useAuth();
+    const { state_Wishlist: { wishlist } } = useWishlist();
 
-    const navigate = useNavigate();
-
-    function logOutHandler() {
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
-        setUser(null);
-        dispatch_Cart({ type: "CLEAR_CART" });
-        dispatch_Wishlist({ type: "CLEAR_WISHLIST" });
-        navigate('/', { replace: true });
-    }
 
     const searchProductsHandler = debounce((e) => dispatch({ type: "SEARCH", payload: { searchVal: e.target.value } }))
 

@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useReducer, useState } from "react";
 import { loginService, signupService } from "../services/";
+import { userReducer } from "../util_reducers/user-reducer";
 
 
 const AuthContext = createContext();
@@ -40,11 +41,13 @@ const AuthProvider = ({ children }) => {
         }
     }
 
+    const [stateUser, dispatchUser] = useReducer(userReducer, user)
+
 
 
 
     return (
-        <AuthContext.Provider value={{ user, setUser, encodedToken, setEncodedToken, loginUser, signupUser }}>
+        <AuthContext.Provider value={{ stateUser, dispatchUser, user, setUser, encodedToken, setEncodedToken, loginUser, signupUser }}>
             {children}
         </AuthContext.Provider>
     );
