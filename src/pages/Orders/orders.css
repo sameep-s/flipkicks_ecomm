@@ -9,7 +9,25 @@
 
 
 .profile__data__area{
-    background-color: aliceblue;
     margin-left: 10rem;
     width: 60%;
+    overflow-y: scroll;
+}
+
+.orders__profile__heading{
+    border-bottom: .1rem solid black;
+}
+
+.user__order__area{
+    overflow-y: auto;
+}
+
+.order__container{
+    background-color: var(--dark-shade);
+}
+
+                             
+.order__details{
+    font-size: 2rem;
+    font-family: var(--font-heading);
 }

@@ -34,8 +34,6 @@ function App() {
 
       </Routes>
 
-      <div className="App">
-      </div>
     </BrowserRouter>
   );
 }

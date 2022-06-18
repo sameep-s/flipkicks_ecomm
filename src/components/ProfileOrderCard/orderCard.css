@@ -1,0 +1,18 @@
+
+.profile__order__card{
+    border: .1rem solid var(--dark);
+}
+
+.order__image{
+    height: 10rem;
+}
+
+.order__image img{
+    height: 100%;
+}
+
+.order__info span{
+    font-size: 2rem;
+    font-weight: bold;
+}
+

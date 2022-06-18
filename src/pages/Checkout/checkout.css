@@ -29,38 +29,6 @@
 }
 
 
-/* ---------------------------------------address container */
-.container__address{
-    width: 25rem;
-    border: .1rem solid var(--dark);
-    border-radius: .6rem;
-}
-
-.user__place__address{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-
-.container__address__info input{
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-right: .5rem;
-}
-
-.user__address__info{
-    margin-left: auto;
-}
-
-.user__address__info .address__lane, 
-.user__pincode,
-.user__contactNumber{
-    width: 100%;
-    font-size: 1.6rem;
-    font-family: var(--font-heading);
-}
-
-
 /* ----------------------------------------------------------order Details */
 
 .container__order__details{
@@ -110,11 +78,6 @@
 
 
 /* -----------------------------------------------price Details */
-
-.container__order__priceDetails{
-    /* border-top: .1rem solid black;
-    border-bottom: .1rem solid black; */
-}
 
 .heading__priceDetails{
     border-top: .1rem solid black;

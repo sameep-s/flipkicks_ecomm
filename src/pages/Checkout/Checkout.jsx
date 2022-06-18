@@ -1,4 +1,5 @@
 import React from 'react';
+import { AddressContainer } from '../../components';
 import Navbar from '../Navbar';
 import './checkout.css';
 
@@ -16,21 +17,7 @@ const Checkout = () => {
                     <div className="container__addresses p-1  flex flex-col jc-center a-item-center ">
 
                         {/* ---------------------------------------------- */}
-                        <div className="container__address p-1">
-                            <div className="user__place__address">Home</div>
-                            <div className="container__address__info flex pt-1">
-
-                                <div className="address__action__button">
-                                    <input type="radio" name="address" id="address" />
-                                </div>
-
-                                <div className="user__address__info">
-                                    <div className="address__lane">H.no-22 Sec-3 Trikuta Nagar, Jammu.</div>
-                                    <div className="user__pincode mt-1">Pincode: 1800xx</div>
-                                    <div className="user__contactNumber mt-1">Mobile No.: 1234567890</div>
-                                </div>
-                            </div>
-                        </div>
+                        <AddressContainer />
                         {/* ---------------------------------------------- */}
 
 

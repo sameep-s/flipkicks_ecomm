@@ -8,8 +8,26 @@
 }
 
 
-.profile__data__area{
-    background-color: aliceblue;
+.address__data__area{
     margin-left: 10rem;
     width: 60%;
+    margin-bottom: 5rem;
+}
+
+.address__profile__heading{
+    border-bottom: .1rem solid black;
+}
+
+.address__profile__heading button{
+    color: white;
+    margin: .5rem 0;
+    border-radius: 0;
+    padding: .5rem;
+    margin-left: auto;
+}
+
+.addresses__area{
+    overflow-y: auto;
+    flex-wrap: wrap;
+    height: 100%;
 }

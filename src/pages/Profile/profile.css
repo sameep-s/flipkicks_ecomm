@@ -9,7 +9,22 @@
 
 
 .profile__data__area{
-    background-color: aliceblue;
     margin-left: 10rem;
     width: 60%;
+}
+
+.user__data__heading{
+    font-weight: bold;
+    padding: .4rem 0;
+    border-bottom: .1rem solid black;
+}
+
+.user__data__fields{
+    font-size: 2rem;
+    margin:1rem 0;
+}
+
+.user__data__fields .user__data__value{
+    margin-left: auto;
+    font-weight: bold;
 }

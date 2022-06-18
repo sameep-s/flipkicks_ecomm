@@ -15,7 +15,32 @@ const Profile = () => {
                     <ProfileSidebar />
 
                     <div className="profile__data__area">
-                        Hii
+                        <div className="user__data__container pl-1 pr-1">
+                            <div className="user__data__heading h-5 ">
+                                Profile
+                            </div>
+
+                            <div className="user__data__fields flex">
+                                <span>First Name:</span>
+                                <span className='user__data__value'>Sameep</span>
+                            </div>
+
+                            <div className="user__data__fields flex">
+                                <span>Last Name:</span>
+                                <span className='user__data__value'>Sharma</span>
+                            </div>
+
+                            <div className="user__data__fields flex">
+                                <span>Email</span>
+                                <span className='user__data__value'>sameep.sharma98@gmail.com</span>
+                            </div>
+
+                            <div className="user__data__fields flex">
+                                <span>ID:</span>
+                                <span className='user__data__value'>iddd23r234rkjn4233</span>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
