@@ -10,6 +10,7 @@ import ProductList from './pages/ProductList';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { RequireAuth } from './components';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -17,12 +18,14 @@ function App() {
       <Routes  >
         <Route path="/" element={<Home />} />
         <Route path='/mock' element={<Mockman />} />
-
         <Route path='/products' element={<ProductList />} />
-        <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
-        <Route path='/wishlist' element={<RequireAuth><Wishlist /></RequireAuth>} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+
+        {/* Private Routes */}
+        <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
+        <Route path='/wishlist' element={<RequireAuth><Wishlist /></RequireAuth>} />
+        <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
 
       </Routes>
 

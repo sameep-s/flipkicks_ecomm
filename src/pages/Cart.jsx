@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Footer } from '../components';
 import '../pages-css/cart.css';
 import { useCart } from '../util_Contexts';
@@ -71,7 +72,9 @@ const Cart = () => {
                                     <div className="order-total-value">${totalAmount}</div>
                                 </div>
 
-                                <button className="btn-sq btn-dark">PROCEED TO CHECKOUT</button>
+                                <NavLink to='/checkout'>
+                                    <button className="btn-sq btn-dark">PROCEED TO CHECKOUT</button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
