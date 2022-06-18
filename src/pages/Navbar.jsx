@@ -59,7 +59,7 @@ const Navbar = ({ search }) => {
 
                         <div className="nav-icon-container">
                             <div className="nav-heart-icon pos-rel">
-                                <Link to="/">
+                                <Link to="/profile">
                                     <FontAwesomeIcon icon={faUser} className="nav__icons" />
                                 </Link>
                             </div>

@@ -1,0 +1,10 @@
+.container__main__profile{
+    height: calc(100vh - 8rem);
+}
+
+.container__inner__profile{
+    height: calc(100vh - 16rem);
+    width: 90%;
+}
+
+

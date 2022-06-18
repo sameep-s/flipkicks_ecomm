@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { RequireAuth } from './components';
 import Checkout from './pages/Checkout/Checkout';
+import { Profile } from './pages';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
         <Route path='/wishlist' element={<RequireAuth><Wishlist /></RequireAuth>} />
         <Route path='/checkout' element={<RequireAuth><Checkout /></RequireAuth>} />
+        <Route path='/profile' element={<RequireAuth> <Profile /> </RequireAuth>} />
+
 
       </Routes>
 
