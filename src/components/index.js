@@ -4,6 +4,7 @@ import { RequireAuth } from "./Private-Routes/RequireAuth";
 import ProfileSidebar from "./ProfileSidebar/ProfileSidebar";
 import OrderCard from "./ProfileOrderCard/OrderCard";
 import AddressContainer from "./AddressContainer/AddressContainer";
+import AddressOverlay from "./AddressOverlay/AddressOverlay";
 
 export {
     Footer,
@@ -11,5 +12,6 @@ export {
     RequireAuth,
     ProfileSidebar,
     OrderCard,
-    AddressContainer
+    AddressContainer,
+    AddressOverlay
 };

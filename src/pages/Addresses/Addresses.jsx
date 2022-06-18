@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './addresses.css';
-import { AddressContainer, Footer, ProfileSidebar } from '../../components';
+import { AddressContainer, AddressOverlay, Footer, ProfileSidebar } from '../../components';
 import Navbar from '../Navbar';
 
 const Addresses = () => {
+
+    const [addressOverlayIsOpen, setAddressOverlayIsOpen] = useState(false);
+
     return (
         <>
             <Navbar />
@@ -14,7 +17,7 @@ const Addresses = () => {
                     <div className="address__data__area">
                         <div className="address__profile__heading flex a-item-center h-5">
                             Addresses
-                            <button className="btn btn-primary">Add Address+</button>
+                            <button onClick={() => setAddressOverlayIsOpen(true)} className="btn btn-primary">Add Address+</button>
                         </div>
 
                         <div className="addresses__area pt-1 pb-1">
@@ -24,6 +27,11 @@ const Addresses = () => {
 
                 </div>
             </main >
+            <AddressOverlay
+                addressOverlayIsOpen={addressOverlayIsOpen}
+                setAddressOverlayIsOpen={setAddressOverlayIsOpen}
+
+            />
             <Footer />
         </>
     )

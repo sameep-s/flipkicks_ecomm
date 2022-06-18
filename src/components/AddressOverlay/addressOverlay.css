@@ -1,0 +1,45 @@
+/* ---------------------------------------post overlay container */
+
+.address__ovelay__container{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    animation: popIn 260ms;
+}
+
+.container__form__address{
+    width: 40rem;
+    padding: 2rem;
+    background-color: white;
+}
+
+.container__form__address form{
+    border: .1rem solid var(--dark); 
+    padding: 2rem;
+}
+
+.address__overlay__visible{
+    background-color: var(--dark);
+    filter: brightness(20%);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.form__buttons button{
+    margin: .5rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: .4rem;
+}
+
+
+
+@keyframes popIn {
+    0% {transform: scale(1.05);}
+    100% {transform: scale(1.0);}
+}
