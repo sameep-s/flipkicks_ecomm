@@ -15,8 +15,9 @@ export const users = [
     email: "sam@gmail.com",
     password: "p123",
     addresses: [{
+      _id: uuid(),
       addName: "Home",
-      adddress: "H.no-XX Sec-XX Trikuta Nagar, Jammu",
+      address: "H.no-XX Sec-XX Trikuta Nagar, Jammu",
       pinCode: 180001,
       phone: 9293844856
     }],

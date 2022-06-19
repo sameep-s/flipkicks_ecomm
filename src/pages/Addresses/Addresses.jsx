@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import './addresses.css';
 import { AddressContainer, AddressOverlay, Footer, ProfileSidebar } from '../../components';
 import Navbar from '../Navbar';
+import { useAuth } from '../../util_Contexts/auth-context';
 
 const Addresses = () => {
+
+    const { stateUser } = useAuth();
+    console.log(stateUser);
 
     const [addressOverlayIsOpen, setAddressOverlayIsOpen] = useState(false);
 
@@ -21,7 +25,8 @@ const Addresses = () => {
                         </div>
 
                         <div className="addresses__area pt-1 pb-1">
-                            <AddressContainer />
+                            {stateUser.addresses?.map((address) => <AddressContainer key={address.addName} {...address} />)}
+
                         </div>
                     </div>
 
@@ -30,7 +35,6 @@ const Addresses = () => {
             <AddressOverlay
                 addressOverlayIsOpen={addressOverlayIsOpen}
                 setAddressOverlayIsOpen={setAddressOverlayIsOpen}
-
             />
             <Footer />
         </>

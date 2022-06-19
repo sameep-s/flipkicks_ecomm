@@ -41,7 +41,7 @@ const AuthProvider = ({ children }) => {
         }
     }
 
-    const [stateUser, dispatchUser] = useReducer(userReducer, user)
+    const [stateUser, dispatchUser] = useReducer(userReducer, user);
 
 
 
