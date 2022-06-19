@@ -5,6 +5,7 @@ import App from "./App";
 import { FilterProvider } from "./util_Contexts/filter-context";
 import { CartProvider } from "./util_Contexts/cart-context";
 import { ProductsProvider } from "./util_Contexts/products-context";
+import { Toaster } from 'react-hot-toast';
 
 import { makeServer } from "./server";
 import { WishlistProvider } from "./util_Contexts/wishlist-context";
@@ -23,6 +24,14 @@ ReactDOM.render(
           <AuthProvider>
             <WishlistProvider>
               <App />
+              <Toaster toastOptions={
+                {
+                  duration: 1500,
+                  style: {
+                    fontSize: "2rem"
+                  },
+                }}
+              />
             </WishlistProvider>
           </AuthProvider>
         </CartProvider>

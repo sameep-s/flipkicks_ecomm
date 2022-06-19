@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AddressContainer, AddressOverlay } from '../../components';
 import { useCart } from '../../util_Contexts';
 import { useAuth } from '../../util_Contexts/auth-context';
+import toast from 'react-hot-toast';
 import { getCheckoutDetails, getTotalAmount } from '../../util_fucntions/checkout/checkout-functions';
 import Navbar from '../Navbar';
 import './checkout.css';
@@ -33,12 +34,11 @@ const Checkout = () => {
     const totalAmount = getTotalAmount(priceTotal);
 
     function orderHandler() {
-
         dispatchUser({ type: "NEW__ORDER", payload: { order: { ...order } } });
         navigate('/orders');
-
         setOrder(initialOrderVal);
         dispatch_Cart({ type: "CLEAR_CART" });
+        toast.success(`Order Placed`);
     }
 
     return (

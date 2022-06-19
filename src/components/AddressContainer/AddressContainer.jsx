@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../util_Contexts/auth-context';
 import AddressOverlay from '../AddressOverlay/AddressOverlay';
+import toast from 'react-hot-toast';
 import './addressContainer.css';
 
 const AddressContainer = ({ address, show, setOrder, order }) => {
@@ -8,10 +9,9 @@ const AddressContainer = ({ address, show, setOrder, order }) => {
     const [editOverlayIsOpen, setEditOverlayIsOpen] = useState(false);
     const { dispatchUser } = useAuth();
 
-    console.log(order);
-
     function removeAddress() {
-        dispatchUser({ type: "REMOVE__ADDRESS", payload: { address: address } })
+        dispatchUser({ type: "REMOVE__ADDRESS", payload: { address: address } });
+        toast.error(`address removed`);
     }
 
     return (
