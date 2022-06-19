@@ -19,7 +19,7 @@ export const userReducer = (stateUser, action) => {
 
         case "NEW__ORDER":
             return {
-                ...stateUser, orders: [action.payload.order]
+                ...stateUser, orders: [...stateUser.orders, action.payload.order]
             }
 
         case 'DEFAULT':

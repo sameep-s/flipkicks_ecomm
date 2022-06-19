@@ -10,10 +10,13 @@ import './checkout.css';
 
 const Checkout = () => {
 
+    const { state_Cart: { cart }, dispatch_Cart } = useCart();
+
+
     const initialOrderVal = {
         _id: uuid(),
         orderAddress: "",
-        orderItems: []
+        orderItems: cart
     }
 
     const [order, setOrder] = useState(initialOrderVal);
@@ -22,7 +25,6 @@ const Checkout = () => {
     const { stateUser, dispatchUser } = useAuth();
     const navigate = useNavigate();
 
-    const { state_Cart: { cart }, dispatch_Cart } = useCart();
     console.log(`cart`, cart);
     console.log(`order`, order);
 
@@ -32,9 +34,7 @@ const Checkout = () => {
 
     function orderHandler() {
 
-        setOrder({ ...order, orderItems: cart });
-        dispatchUser({ type: "NEW__ORDER", payload: { order: order } });
-
+        dispatchUser({ type: "NEW__ORDER", payload: { order: { ...order } } });
         navigate('/orders');
 
         setOrder(initialOrderVal);
