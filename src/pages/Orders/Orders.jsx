@@ -2,14 +2,14 @@ import React from 'react';
 import './orders.css';
 import { Footer, OrderCard, ProfileSidebar } from '../../components';
 import Navbar from '../Navbar';
-import { useCart } from '../../util_Contexts';
+import { useAuth } from '../../util_Contexts/auth-context';
 
 
 const Orders = () => {
 
-    const { state_Cart } = useCart();
-    const cartItems = state_Cart.cart;
-    console.log(cartItems);
+    const { stateUser: { orders } } = useAuth();
+
+    console.log(`userOders`, orders);
 
     return (
         <>
@@ -24,14 +24,18 @@ const Orders = () => {
                                 Orders
                             </div>
 
-                            <div className="order__container p-1 mb-2 mt-2">
-                                <div className="order__details">
-                                    <div>Order ID: 234234fwfd</div>
+
+                            {[...orders]?.reverse().map((order) =>
+                                <div key={order._id} className="order__container p-1 mb-2 mt-2">
+                                    <div className="order__details">
+                                        <div>Order ID: {order._id}</div>
+                                    </div>
+                                    <div className="user__order__area">
+                                        {order?.orderItems?.map((item) => <OrderCard key={item._id} {...item} />)}
+                                    </div>
                                 </div>
-                                <div className="user__order__area">
-                                    {cartItems.map((item) => <OrderCard key={item._id} {...item} />)}
-                                </div>
-                            </div>
+                            )}
+
 
                         </div>
                     </div>

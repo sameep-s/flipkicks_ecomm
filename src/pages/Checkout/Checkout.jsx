@@ -13,27 +13,32 @@ const Checkout = () => {
     const initialOrderVal = {
         _id: uuid(),
         orderAddress: "",
-        orderItems: {}
+        orderItems: []
     }
 
-    const { stateUser, dispatchUser } = useAuth()
-    const navigate = useNavigate();
-    const [order, setOrder] = useState(initialOrderVal)
+    const [order, setOrder] = useState(initialOrderVal);
     const [addressOverlayIsOpen, setAddressOverlayIsOpen] = useState(false);
 
-    const { state_Cart: { cart } } = useCart();
+    const { stateUser, dispatchUser } = useAuth();
+    const navigate = useNavigate();
+
+    const { state_Cart: { cart }, dispatch_Cart } = useCart();
+    console.log(`cart`, cart);
+    console.log(`order`, order);
 
 
     const { priceTotal, itemsTotal } = getCheckoutDetails(cart);
     const totalAmount = getTotalAmount(priceTotal);
 
     function orderHandler() {
-        setOrder({ ...order, orderItems: cart })
+
+        setOrder({ ...order, orderItems: cart });
         dispatchUser({ type: "NEW__ORDER", payload: { order: order } });
-        // navigate('/orders');
 
-        // setOrder(initialOrderVal);
+        navigate('/orders');
 
+        setOrder(initialOrderVal);
+        dispatch_Cart({ type: "CLEAR_CART" });
     }
 
     return (

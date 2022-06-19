@@ -20,7 +20,6 @@ export const userReducer = (stateUser, action) => {
         case "NEW__ORDER":
             return {
                 ...stateUser, orders: [action.payload.order]
-
             }
 
         case 'DEFAULT':
