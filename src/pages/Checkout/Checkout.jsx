@@ -1,9 +1,41 @@
-import React from 'react';
-import { AddressContainer } from '../../components';
+import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid'
+import { useNavigate } from 'react-router-dom';
+import { AddressContainer, AddressOverlay } from '../../components';
+import { useCart } from '../../util_Contexts';
+import { useAuth } from '../../util_Contexts/auth-context';
+import { getCheckoutDetails, getTotalAmount } from '../../util_fucntions/checkout/checkout-functions';
 import Navbar from '../Navbar';
 import './checkout.css';
 
 const Checkout = () => {
+
+    const initialOrderVal = {
+        _id: uuid(),
+        orderAddress: "",
+        orderItems: {}
+    }
+
+    const { stateUser, dispatchUser } = useAuth()
+    const navigate = useNavigate();
+    const [order, setOrder] = useState(initialOrderVal)
+    const [addressOverlayIsOpen, setAddressOverlayIsOpen] = useState(false);
+
+    const { state_Cart: { cart } } = useCart();
+
+
+    const { priceTotal, itemsTotal } = getCheckoutDetails(cart);
+    const totalAmount = getTotalAmount(priceTotal);
+
+    function orderHandler() {
+        setOrder({ ...order, orderItems: cart })
+        dispatchUser({ type: "NEW__ORDER", payload: { order: order } });
+        // navigate('/orders');
+
+        // setOrder(initialOrderVal);
+
+    }
+
     return (
         <>
             <Navbar />
@@ -12,14 +44,11 @@ const Checkout = () => {
 
                     <div className="address__area__heading flex a-item-center p-1">
                         Select Address
-                        <span><button className="btn btn-primary"> Add Address+</button></span>
+                        <span><button onClick={() => setAddressOverlayIsOpen(true)} className="btn btn-primary"> Add Address+</button></span>
                     </div>
                     <div className="container__addresses p-1  flex flex-col jc-center a-item-center ">
 
-                        {/* ---------------------------------------------- */}
-                        <AddressContainer />
-                        {/* ---------------------------------------------- */}
-
+                        {stateUser?.addresses?.map((address) => <AddressContainer show setOrder={setOrder} order={order} key={address._id} {...{ address }} />)}
 
                     </div>
                 </div>
@@ -43,10 +72,13 @@ const Checkout = () => {
 
                             <div className="container__purchased__item__area">
 
-                                <div className="order__item__container mt-1 flex">
-                                    <span>Jordan 1 X OFF-WHITE * 2</span>
-                                    <span className='itemPriceLabel'>344456</span>
-                                </div>
+                                {cart?.map((item) =>
+                                    <div key={item._id} className="order__item__container mt-1 flex">
+                                        <span>{item.productName} * {item.qty} </span>
+                                        <span className='itemPriceLabel'>{item.price}</span>
+                                    </div>
+                                )}
+
 
 
                             </div>
@@ -64,31 +96,37 @@ const Checkout = () => {
 
                             <div className="flex">
                                 <span>Total Price:</span>
-                                <span className='priceDetail__value' >787888</span>
+                                <span className='priceDetail__value' >{priceTotal}</span>
                             </div>
 
                             <div className="flex">
                                 <span>Disount</span>
-                                <span className='priceDetail__value' >787888</span>
+                                <span className='priceDetail__value' >-$1999</span>
                             </div>
 
                             <div className="flex">
                                 <span>Delivery Charges</span>
-                                <span className='priceDetail__value' >787888</span>
+                                <span className='priceDetail__value' >$10</span>
                             </div>
 
                             <div className="flex finalPrice">
                                 <span>Total</span>
-                                <span className='priceDetail__value' >787888</span>
+                                <span className='priceDetail__value' >{totalAmount}</span>
                             </div>
 
                         </div>
                     </div>
 
-                    <button className="btn btn-primary">Place Order</button>
+                    <button onClick={() => orderHandler()} className="btn btn-primary " disabled={order.orderAddress === ""} >Place Order</button>
 
                 </div>
             </main>
+
+            <AddressOverlay
+                show
+                addressOverlayIsOpen={addressOverlayIsOpen}
+                setAddressOverlayIsOpen={setAddressOverlayIsOpen}
+            />
         </>
     )
 }

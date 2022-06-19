@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Footer } from '../components';
 import '../pages-css/cart.css';
 import { useCart } from '../util_Contexts';
+import { getCheckoutDetails, getTotalAmount } from '../util_fucntions/checkout/checkout-functions';
 import CardCart from './CardCart';
 import Navbar from './Navbar';
 
@@ -11,20 +12,6 @@ const Cart = () => {
     const { state_Cart } = useCart();
     const cartItems = state_Cart.cart;
 
-    const getCheckoutDetails = (items) => {
-        const { priceTotal, itemsTotal } = items.reduce((acc, cur) => {
-            acc.priceTotal += cur.price * cur.qty;
-            acc.itemsTotal += cur.qty;
-
-            return acc;
-        }, { priceTotal: 0, itemsTotal: 0 })
-
-        return { priceTotal, itemsTotal }
-    }
-
-    const getTotalAmount = (priceTotal, discountTotal = 1999, deliveryChargesTotal = 10) => {
-        return priceTotal - discountTotal + deliveryChargesTotal
-    }
 
     const { priceTotal, itemsTotal } = getCheckoutDetails(cartItems);
     const totalAmount = getTotalAmount(priceTotal);

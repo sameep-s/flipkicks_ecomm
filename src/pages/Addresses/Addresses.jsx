@@ -7,7 +7,6 @@ import { useAuth } from '../../util_Contexts/auth-context';
 const Addresses = () => {
 
     const { stateUser } = useAuth();
-    console.log(stateUser);
 
     const [addressOverlayIsOpen, setAddressOverlayIsOpen] = useState(false);
 
@@ -25,8 +24,7 @@ const Addresses = () => {
                         </div>
 
                         <div className="addresses__area pt-1 pb-1">
-                            {stateUser.addresses?.map((address) => <AddressContainer key={address.addName} {...address} />)}
-
+                            {stateUser.addresses?.map((address) => <AddressContainer key={address._id} {...address} />)}
                         </div>
                     </div>
 

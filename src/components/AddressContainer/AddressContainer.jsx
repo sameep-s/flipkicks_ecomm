@@ -3,11 +3,12 @@ import { useAuth } from '../../util_Contexts/auth-context';
 import AddressOverlay from '../AddressOverlay/AddressOverlay';
 import './addressContainer.css';
 
-const AddressContainer = (address, { show }) => {
+const AddressContainer = ({ address, show, setOrder, order }) => {
 
     const [editOverlayIsOpen, setEditOverlayIsOpen] = useState(false);
     const { dispatchUser } = useAuth();
 
+    console.log(order);
 
     function removeAddress() {
         dispatchUser({ type: "REMOVE__ADDRESS", payload: { address: address } })
@@ -21,7 +22,7 @@ const AddressContainer = (address, { show }) => {
                     {
                         show &&
                         <div className="address__action__button">
-                            <input type="radio" name="address" id="address" />
+                            <input onClick={() => setOrder({ ...order, orderAddress: address })} type="radio" name="address" id="address" />
                         </div>
                     }
 

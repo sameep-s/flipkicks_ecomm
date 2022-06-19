@@ -17,6 +17,12 @@ export const userReducer = (stateUser, action) => {
                 ...stateUser, addresses: [...stateUser.addresses.filter((address) => address._id !== action.payload.address._id), action.payload.address]
             }
 
+        case "NEW__ORDER":
+            return {
+                ...stateUser, orders: [action.payload.order]
+
+            }
+
         case 'DEFAULT':
             return stateUser;
     }

@@ -17,8 +17,6 @@ const AddressOverlay = ({ addressOverlayIsOpen, setAddressOverlayIsOpen, edit, a
     const [addressValue, setAddressValue] = useState(edit ? address : initialAddressValue);
     const { dispatchUser } = useAuth();
 
-    console.log(`overlay address`, address, edit);
-    console.log(` addressVal`, addressValue);
 
 
     function addAddressHandler(e) {
