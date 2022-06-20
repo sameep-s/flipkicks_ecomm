@@ -26,7 +26,7 @@ ReactDOM.render(
               <App />
               <Toaster toastOptions={
                 {
-                  duration: 1500,
+                  duration: 2000,
                   style: {
                     fontSize: "2rem"
                   },
