@@ -37,6 +37,11 @@ const Checkout = () => {
         toast.success(`Order Placed`);
     }
 
+    function orderButtonDisabledHandler() {
+        toast.error(`Please Select An Address First.`);
+        return order.orderAddress === ""
+    }
+
     return (
         <>
             <Navbar />
@@ -118,7 +123,7 @@ const Checkout = () => {
                         </div>
                     </div>
 
-                    <button onClick={() => orderHandler()} className="btn btn-primary " disabled={order.orderAddress === ""} >Place Order</button>
+                    <button onClick={() => order.orderAddress === "" ? orderButtonDisabledHandler() : orderHandler()} className="btn btn-primary ">Place Order</button>
 
                 </div>
             </main>
