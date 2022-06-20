@@ -9,8 +9,6 @@ const Orders = () => {
 
     const { stateUser: { orders } } = useAuth();
 
-    console.log(`userOders`, orders);
-
     return (
         <>
             <Navbar />

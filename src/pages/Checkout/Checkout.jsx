@@ -26,10 +26,6 @@ const Checkout = () => {
     const { stateUser, dispatchUser } = useAuth();
     const navigate = useNavigate();
 
-    console.log(`cart`, cart);
-    console.log(`order`, order);
-
-
     const { priceTotal, itemsTotal } = getCheckoutDetails(cart);
     const totalAmount = getTotalAmount(priceTotal);
 

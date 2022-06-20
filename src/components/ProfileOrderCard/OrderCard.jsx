@@ -2,7 +2,6 @@ import React from 'react';
 import './orderCard.css';
 
 const OrderCard = (item) => {
-    console.log(`ordercard`, item);
     return (
         <>
             <div className="profile__order__card mt-1 mb-1 flex">

@@ -7,7 +7,6 @@ import { useAuth } from '../../util_Contexts/auth-context';
 const Addresses = () => {
 
     const { stateUser } = useAuth();
-    console.log(`siu`, stateUser);
 
     const [addressOverlayIsOpen, setAddressOverlayIsOpen] = useState(false);
 
@@ -40,4 +39,4 @@ const Addresses = () => {
     )
 }
 
-export default Addresses
+export default Addresses;

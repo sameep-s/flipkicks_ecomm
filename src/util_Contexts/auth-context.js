@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useState } from "react";
+import React, { createContext, useContext, useReducer, useState, useEffect } from "react";
 import { loginService, signupService } from "../services/";
 import { userReducer } from "../util_reducers/user-reducer";
 
@@ -43,6 +43,10 @@ const AuthProvider = ({ children }) => {
 
     const [stateUser, dispatchUser] = useReducer(userReducer, user);
 
+    useEffect(() => {
+        dispatchUser({ type: "USER__INIT", payload: { user: user } });
+        console.log(`authDispatch`);
+    }, [user]);
 
 
 
