@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955198/project_Ecomm/air2_lsfzfb.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715267/project_Ecomm/ecomm__downscaled/air2_lsfzfb_kp0oqw.jpg",
     title: "NIKE",
     productName: "Jordan 1 UNC Chicago",
     price: 53000,
@@ -18,7 +18,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955207/project_Ecomm/product5_qcebfo.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715266/project_Ecomm/ecomm__downscaled/product5_qcebfo_l1akyx.jpg",
     title: "NIKE",
     productName: "Jordan 1 Black Toe",
     price: 27000,
@@ -28,7 +28,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://images.unsplash.com/photo-1610870372593-a8647b04451f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955192/project_Ecomm/col6_hhdkwr.jpg",
     title: "NIKE",
     productName: "Jordan 1 Retro OG",
     price: 23000,
@@ -38,7 +38,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955202/project_Ecomm/product4_vr2ao0.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715266/project_Ecomm/ecomm__downscaled/product4_vr2ao0_e2cvjt.jpg",
     title: "NIKE",
     productName: "Jordan 1 Shadow",
     price: 30000,
@@ -48,7 +48,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955194/project_Ecomm/air1_jifei7.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715267/project_Ecomm/ecomm__downscaled/air1_jifei7_u8bfq6.jpg",
     title: "NIKE",
     productName: "Jordan 1 X OFF-WHITE",
     price: 43000,
@@ -58,7 +58,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955196/project_Ecomm/product2_znlj6f.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715266/project_Ecomm/ecomm__downscaled/product2_znlj6f_gb2byu.jpg",
     title: "NIKE",
     productName: "Jordan 1 Powder Blue",
     price: 16000,
@@ -68,7 +68,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955193/project_Ecomm/product1_omgado.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715266/project_Ecomm/ecomm__downscaled/product1_omgado_k6stkl.jpg",
     title: "NIKE",
     productName: "Jordan 1 x Travis Scott",
     price: 21000,
@@ -78,7 +78,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955193/project_Ecomm/product6_ikjb4j.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715266/project_Ecomm/ecomm__downscaled/product6_ikjb4j_wlc8fc.jpg",
     title: "NIKE",
     productName: "Jordan 1 Clean Slate",
     price: 18000,
@@ -88,7 +88,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955193/project_Ecomm/aforce1_h0lbzs.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715267/project_Ecomm/ecomm__downscaled/aforce1_h0lbzs_syzg6m.jpg",
     title: "NIKE",
     productName: "Air Force 1 Colours",
     price: 12000,
@@ -98,7 +98,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955194/project_Ecomm/aforce2_ope3pt.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715267/project_Ecomm/ecomm__downscaled/aforce2_ope3pt_ugel9x.jpg",
     title: "NIKE",
     productName: "Air Force 1 Gray",
     price: 10000,
@@ -108,7 +108,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "https://res.cloudinary.com/sameep1/image/upload/v1647955193/project_Ecomm/product3_samqkp.jpg",
+    image: "https://res.cloudinary.com/sameep1/image/upload/v1655715266/project_Ecomm/ecomm__downscaled/product3_samqkp_b6f3em.jpg",
     title: "NIKE",
     productName: "Jordan 5 Purple",
     price: 25000,
