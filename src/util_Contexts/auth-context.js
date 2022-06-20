@@ -45,7 +45,6 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         dispatchUser({ type: "USER__INIT", payload: { user: user } });
-        console.log(`authDispatch`);
     }, [user]);
 
 
