@@ -25,6 +25,7 @@ const Checkout = () => {
 
     const { stateUser, dispatchUser } = useAuth();
     const navigate = useNavigate();
+    console.log(stateUser.firstName);
 
     const { priceTotal, itemsTotal } = getCheckoutDetails(cart);
     const totalAmount = getTotalAmount(priceTotal);
@@ -40,6 +41,50 @@ const Checkout = () => {
     function orderButtonDisabledHandler() {
         toast.error(`Please Select An Address First.`);
         return order.orderAddress === ""
+    }
+
+    async function loadScriptForPayment() {
+        const script = document.createElement('script');
+        script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+
+        return new Promise((res) => {
+            script.onload = () => {
+                res(true);
+            };
+
+            script.onerror = () => {
+                res(false);
+            }
+            document.body.appendChild(script);
+        })
+
+    }
+
+    async function makePayment() {
+        const response = await loadScriptForPayment();
+        if (!response) {
+            toast.error(`Script can't be Loaded `)
+        }
+        const options = {
+            "key": "rzp_test_v7mb89ZlzJ6ew3",
+            "amount": totalAmount * 100,
+            "currency": "INR",
+            "name": "FlipKicks",
+            "description": "Thank you for choosing us.",
+            "image": "https://res.cloudinary.com/sameep1/image/upload/v1655715267/project_Ecomm/ecomm__downscaled/col-6-1_-_Copy_i9q1gw_ybmubu_kzh28a.jpg",
+            "handler": () => {
+                orderHandler();
+                document.body.removeChild(sx)
+            },
+            "prefill": {
+                "name": `${stateUser.firstName} ${stateUser.lastName}`,
+                "email": stateUser.email,
+                "contact": "9475644738"
+            }
+        }
+
+        const razorpayWindow = new window.Razorpay(options);
+        razorpayWindow.open();
     }
 
     return (
@@ -123,7 +168,7 @@ const Checkout = () => {
                         </div>
                     </div>
 
-                    <button onClick={() => order.orderAddress === "" ? orderButtonDisabledHandler() : orderHandler()} className="btn btn-primary ">Place Order</button>
+                    <button onClick={() => order.orderAddress === "" ? orderButtonDisabledHandler() : makePayment()} className="btn btn-primary ">Place Order</button>
 
                 </div>
             </main>

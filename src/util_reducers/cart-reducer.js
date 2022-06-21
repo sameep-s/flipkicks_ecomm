@@ -11,13 +11,12 @@ export const CartReducer = (state_Cart, action_Cart) => {
                 return { cart: [...cart] }
 
             {
-                toast.success(`Item Added To Cart.`)
+                toast.success(`Item Added To Cart.`);
                 return { cart: [...cart, { ...action_Cart.payload, qty: 1 }] }
             }
 
         case "CLEAR_CART":
             {
-                toast.success(`Cart Cleared`)
                 return {
                     ...state_Cart, cart: []
                 }
