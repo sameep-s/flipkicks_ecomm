@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './orders.css';
 import { Footer, OrderCard, ProfileSidebar } from '../../components';
 import Navbar from '../Navbar';
@@ -8,6 +8,11 @@ import { useAuth } from '../../util_Contexts/auth-context';
 const Orders = () => {
 
     const { stateUser: { orders } } = useAuth();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
 
     return (
         <>

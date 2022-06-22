@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './addresses.css';
 import { AddressContainer, AddressOverlay, Footer, ProfileSidebar } from '../../components';
 import Navbar from '../Navbar';
@@ -9,6 +9,10 @@ const Addresses = () => {
     const { stateUser } = useAuth();
 
     const [addressOverlayIsOpen, setAddressOverlayIsOpen] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

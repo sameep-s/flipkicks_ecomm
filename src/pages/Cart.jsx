@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Footer } from '../components';
 import '../pages-css/cart.css';
@@ -12,6 +12,9 @@ const Cart = () => {
     const { state_Cart } = useCart();
     const cartItems = state_Cart.cart;
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const { priceTotal, itemsTotal } = getCheckoutDetails(cartItems);
     const totalAmount = getTotalAmount(priceTotal);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../pages-css/wishlist.css';
 import CardProduct from './CardProduct';
 import Navbar from './Navbar';
@@ -9,6 +9,10 @@ import { Footer } from '../components';
 function Wishlist() {
 
     const { state_Wishlist: { wishlist } } = useWishlist();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

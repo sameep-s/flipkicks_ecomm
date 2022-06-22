@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../pages-css/main.css';
 import Navbar from "./Navbar";
 import BannerHome from './BannerHome';
@@ -6,6 +6,11 @@ import BannerHomeHalf from './BannerHomeHalf';
 import { Footer } from '../components';
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Navbar />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { v4 as uuid } from 'uuid'
 import { useNavigate } from 'react-router-dom';
 import { AddressContainer, AddressOverlay } from '../../components';
@@ -13,6 +13,9 @@ const Checkout = () => {
 
     const { state_Cart: { cart }, dispatch_Cart } = useCart();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const initialOrderVal = {
         _id: uuid(),
@@ -25,7 +28,6 @@ const Checkout = () => {
 
     const { stateUser, dispatchUser } = useAuth();
     const navigate = useNavigate();
-    console.log(stateUser.firstName);
 
     const { priceTotal, itemsTotal } = getCheckoutDetails(cart);
     const totalAmount = getTotalAmount(priceTotal);
