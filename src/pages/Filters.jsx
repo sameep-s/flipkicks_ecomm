@@ -26,8 +26,8 @@ const Filters = () => {
                                 <input
                                     type="radio"
                                     name="pList-radio"
-                                    id="pList-radio-high"
                                     className="pList-radio"
+                                    id="pList-radio-high"
                                     checked={sortBy === "LOW_TO_HIGH"}
                                     onChange={() => dispatch({ type: "sortBy", payload: "LOW_TO_HIGH" })}
                                 />
@@ -39,8 +39,8 @@ const Filters = () => {
                                 <input
                                     type="radio"
                                     name="pList-radio"
-                                    id="pList-radio-low"
                                     className="pList-radio"
+                                    id="pList-radio-low"
                                     checked={sortBy === "HIGH_TO_LOW"}
                                     onChange={() => dispatch({ type: "sortBy", payload: "HIGH_TO_LOW" })}
                                 />
@@ -107,38 +107,38 @@ const Filters = () => {
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     className="pList-checkbox"
                                     checked={brand.includes("jordan")}
+                                    id="pList-checkbox-jordan"
                                     onChange={() => dispatch({ type: "brand", payload: "jordan" })}
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox-jordan" className="pList-label">
                                     Jordan</label
                                 >
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     className="pList-checkbox"
+                                    id="pList-checkbox-nike-sw"
                                     checked={brand.includes("nike-sportswear")}
                                     onChange={() => dispatch({ type: "brand", payload: "nike-sportswear" })}
 
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox-nike-sw" className="pList-label">
                                     Nike Sportswear</label
                                 >
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     className="pList-checkbox"
+                                    id="pList-checkbox-nikelab"
                                     checked={brand.includes("nikelab")}
                                     onChange={() => dispatch({ type: "brand", payload: "nikelab" })}
 
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox-nikelab" className="pList-label">
                                     NikeLab</label
                                 >
                             </div>
@@ -146,13 +146,13 @@ const Filters = () => {
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     className="pList-checkbox"
+                                    id="pList-checkbox-jxoffwhite"
                                     checked={brand.includes("jordanxoffwhite")}
                                     onChange={() => dispatch({ type: "brand", payload: "jordanxoffwhite" })}
 
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox-jxoffwhite" className="pList-label">
                                     Jordan X Off-White</label
                                 >
                             </div>
@@ -160,13 +160,13 @@ const Filters = () => {
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     className="pList-checkbox"
+                                    id="pList-checkbox-nikepro"
                                     checked={brand.includes("nikepro")}
                                     onChange={() => dispatch({ type: "brand", payload: "nikepro" })}
 
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox-nikepro" className="pList-label">
                                     Nike Pro</label
                                 >
                             </div>
@@ -174,13 +174,13 @@ const Filters = () => {
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     className="pList-checkbox"
+                                    id="pList-checkbox-nike"
                                     checked={brand.includes("nike")}
                                     onChange={() => dispatch({ type: "brand", payload: "nike" })}
 
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label">
+                                <label htmlFor="pList-checkbox-nike" className="pList-label">
                                     Nike</label
                                 >
                             </div>
@@ -196,65 +196,65 @@ const Filters = () => {
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     checked={size.includes(4.5)}
-                                    onChange={() => dispatch({ type: "size", payload: 4.5 })}
                                     className="pList-checkbox"
+                                    id="size-checkbox-4.5"
+                                    onChange={() => dispatch({ type: "size", payload: 4.5 })}
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label"> 4.5</label>
+                                <label htmlFor="size-checkbox-4.5" className="pList-label"> 4.5</label>
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
                                     checked={size.includes(5)}
-                                    id="pList-checkbox"
+                                    className="pList-checkbox"
                                     onChange={() => dispatch({ type: "size", payload: 5 })}
-                                    className="pList-checkbox"
+                                    id="size-checkbox-5"
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label"> 5</label>
+                                <label htmlFor="size-checkbox-5" className="pList-label"> 5</label>
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     checked={size.includes(6)}
+                                    className="pList-checkbox"
+                                    id="size-checkbox-6"
                                     onChange={() => dispatch({ type: "size", payload: 6 })}
-                                    className="pList-checkbox"
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label"> 6</label>
+                                <label htmlFor="size-checkbox-6" className="pList-label"> 6</label>
                             </div>
 
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     checked={size.includes(7)}
+                                    className="pList-checkbox"
+                                    id="size-checkbox-7"
                                     onChange={() => dispatch({ type: "size", payload: 7 })}
-                                    className="pList-checkbox"
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label"> 7</label>
+                                <label htmlFor="size-checkbox-7" className="pList-label"> 7</label>
                             </div>
 
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     checked={size.includes(9)}
-                                    onChange={() => dispatch({ type: "size", payload: 9 })}
                                     className="pList-checkbox"
+                                    id="size-checkbox-9"
+                                    onChange={() => dispatch({ type: "size", payload: 9 })}
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label"> 9</label>
+                                <label htmlFor="size-checkbox-9" className="pList-label"> 9</label>
                             </div>
 
                             <div className="pList-item-container mt-1">
                                 <input
                                     type="checkbox"
-                                    id="pList-checkbox"
                                     checked={size.includes(11)}
-                                    onChange={() => dispatch({ type: "size", payload: 11 })}
                                     className="pList-checkbox"
+                                    id="size-checkbox-11"
+                                    onChange={() => dispatch({ type: "size", payload: 11 })}
                                 />
-                                <label htmlFor="pList-checkbox" className="pList-label"> 11</label>
+                                <label htmlFor="size-checkbox-11" className="pList-label"> 11</label>
                             </div>
                         </div>
                     </div>

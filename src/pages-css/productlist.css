@@ -57,17 +57,20 @@
 .pList-radio {
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
 }
 
 .pList-label {
   margin-left: 1rem;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 /* -------------checkbox */
 .pList-checkbox {
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
 }
 
 /*--------------------- Range slider */
@@ -96,6 +99,7 @@
 
 .price-slider {
   width: 100%;
+  cursor: pointer;
 }
 
 /* ------------------------------------------- main content */
