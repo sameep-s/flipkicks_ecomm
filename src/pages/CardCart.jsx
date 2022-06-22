@@ -1,14 +1,10 @@
 import React from 'react'
 import '../pages-css/cart.css';
 import { useCart } from '../util_Contexts';
-import { useWishlist } from '../util_Contexts/wishlist-context';
-
-
 
 
 const CardCart = (product) => {
     const { dispatch_Cart } = useCart();
-    const { dispatch_Wishlist } = useWishlist();
 
     return (
         <>
