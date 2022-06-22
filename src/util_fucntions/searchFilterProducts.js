@@ -12,7 +12,7 @@ export function debounce(cb, delay = 500) {
 
 
 export function filterSearch(productList, searchVal) {
-    if (searchVal === "") return [...productList];
+    if (!searchVal) return [...productList];
 
     else return [...productList].filter((item) => item?.productName?.toLowerCase().includes(searchVal));
 }

@@ -32,8 +32,8 @@ const Filters = () => {
                                     onChange={() => dispatch({ type: "sortBy", payload: "LOW_TO_HIGH" })}
                                 />
                                 <label htmlFor="pList-radio-high" className="pList-label">
-                                    Price Low To High</label
-                                >
+                                    Price Low To High
+                                </label>
                             </div>
                             <div className="pList-item-container mt-1">
                                 <input
@@ -45,8 +45,8 @@ const Filters = () => {
                                     onChange={() => dispatch({ type: "sortBy", payload: "HIGH_TO_LOW" })}
                                 />
                                 <label htmlFor="pList-radio-high" className="pList-label">
-                                    Price Low To High</label
-                                >
+                                    Price High To Low
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ const Filters = () => {
                                     className="price-slider mb-1"
                                     id="range-price"
                                     min="500"
-                                    max="9000"
+                                    max="100000"
                                     value={rangeValue || "5000"}
                                     onChange={(e) => dispatch({ type: "range", payload: e.target.value })}
                                 />

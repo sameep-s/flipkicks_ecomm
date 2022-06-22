@@ -8,7 +8,7 @@ const FilterProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(FilterReducer, {
         sortBy: null,
-        rangeValue: 0,
+        rangeValue: null,
         brand: [],
         size: [],
         searchVal: ""

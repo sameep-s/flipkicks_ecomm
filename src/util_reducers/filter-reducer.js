@@ -2,7 +2,7 @@ export const FilterReducer = (state, action) => {
 
     const defaultState = {
         sortBy: null,
-        rangeValue: 0,
+        rangeValue: null,
         brand: [],
         size: []
     }
