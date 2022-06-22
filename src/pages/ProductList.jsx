@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../pages-css/main.css';
 import Navbar from './Navbar';
 import Filters from './Filters';
@@ -22,6 +22,9 @@ const ProductList = () => {
     const filteredDataPrice = getFilteredDataPrice(filteredDataSize, rangeValue);
     const filteredDataSearch = filterSearch(filteredDataPrice, searchVal);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>
