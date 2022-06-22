@@ -39,12 +39,12 @@ const Filters = () => {
                                 <input
                                     type="radio"
                                     name="pList-radio"
-                                    id="pList-radio-high"
+                                    id="pList-radio-low"
                                     className="pList-radio"
                                     checked={sortBy === "HIGH_TO_LOW"}
                                     onChange={() => dispatch({ type: "sortBy", payload: "HIGH_TO_LOW" })}
                                 />
-                                <label htmlFor="pList-radio-high" className="pList-label">
+                                <label htmlFor="pList-radio-low" className="pList-label">
                                     Price High To Low
                                 </label>
                             </div>

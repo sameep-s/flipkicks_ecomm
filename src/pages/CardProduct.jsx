@@ -52,7 +52,7 @@ const CardProduct = (product) => {
 
                     <div className="pList-card-price mt-1">{price}</div>
                     <button className="pList-card-btn" onClick={() => addToCartHandler()}>
-                        {cart.filter(item => item._id === product._id).length === 1 ? "Addded To Cart" : "BUY"}
+                        {cart.filter(item => item._id === product._id).length === 1 ? "Added To Cart" : "BUY"}
                     </button>
                 </div>
 
