@@ -14,7 +14,6 @@ const BannerHome = ({ heading, img, msg, subHeading, link = "#" }) => {
                         <img
                             src={img}
                             alt="image"
-                            // className="img-full skeleton-img"
                             className={img ? "img-full" : "img-full skeleton-img"}
                             loading="lazy"
                         />

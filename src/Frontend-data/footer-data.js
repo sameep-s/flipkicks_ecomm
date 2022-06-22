@@ -5,12 +5,12 @@ export const footerData = [
         _id: uuid(),
         dataHeading: "Get to Know Us",
         dataLinks: [
-            "About Us",
-            "Careers",
-            "Press Releases",
-            "Cares",
-            "Watch a Smile",
-            "SickVids Science"
+            "Link 1",
+            "Link 2",
+            "Link 3",
+            "Link 4",
+            "Link 5",
+            "Link 6",
         ]
     },
 
@@ -18,9 +18,9 @@ export const footerData = [
         _id: uuid(),
         dataHeading: "Connect With Us",
         dataLinks: [
-            "Facebook",
-            "Twitter",
-            "Instagram",
+            "Link 1",
+            "Link 2",
+            "Link 3",
         ]
     },
 
@@ -28,10 +28,10 @@ export const footerData = [
         _id: uuid(),
         dataHeading: "Grow With Us",
         dataLinks: [
-            "Upload Video",
-            "Become Affiliate",
-            "Careers",
-            "R&D",
+            "Link 1",
+            "Link 2",
+            "Link 3",
+            "Link 4",
         ]
     },
 
@@ -39,12 +39,12 @@ export const footerData = [
         _id: uuid(),
         dataHeading: "Let Us Help You",
         dataLinks: [
-            "Your Account",
-            "Privacy Policy",
-            "Terms And Conditions",
-            "Clauses",
-            "FAQ's",
-            "Ask A Question"
+            "Link 1",
+            "Link 2",
+            "Link 3",
+            "Link 4",
+            "Link 5",
+            "Link 6",
         ]
     }
 

@@ -12,6 +12,7 @@
 .btn-dark {
   background-color: var(--night);
   color: var(--day);
+  cursor: pointer;
 }
 
 .btn-dark:hover {
@@ -43,6 +44,7 @@
   border: 0.1rem solid var(--night);
   font-family: var(--font-bold);
   transition: 360ms;
+  cursor: pointer;
 }
 
 .pList-card-btn:hover {
@@ -82,6 +84,7 @@
   font-size: 3.5rem;
   font-family: var(--font-bold);
   transition: 360ms;
+  cursor: pointer;
 }
 
 .btn-overlay:hover {

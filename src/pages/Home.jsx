@@ -26,6 +26,7 @@ const Home = () => {
                         img2="https://res.cloudinary.com/sameep1/image/upload/v1647955192/project_Ecomm/col-6-1_wz2zs2.jpg"
                         text1="RECHARGE WITH COLOR"
                         text2="WEAR THE LATEST"
+                        link="/products"
                     />
 
                     <BannerHome
@@ -33,7 +34,7 @@ const Home = () => {
                         heading="Wear Royalty."
                         msg="The latest looks for kids keep them comfy no matter where the adcentures go."
                         subHeading="IMAGINATION AT PLAY"
-                        link="#"
+                        link="/products"
                     />
 
                     <BannerHomeHalf
@@ -42,6 +43,7 @@ const Home = () => {
                         img2="https://res.cloudinary.com/sameep1/image/upload/v1647955193/project_Ecomm/aforce1_h0lbzs.jpg"
                         text1="NEW COLORWAYS"
                         text2="THE BEST OF THE BEST"
+                        link="/products"
                     />
 
                     <BannerHome
@@ -49,7 +51,7 @@ const Home = () => {
                         heading="DON'T MISS"
                         msg="Flow in classNameic design"
                         subHeading="ICON CLASH COLLECTION"
-                        link="#"
+                        link="/products"
                     />
 
                 </div>
