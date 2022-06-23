@@ -11,8 +11,8 @@ const AddressContainer = ({ address, show, setOrder, order }) => {
 
     function removeAddress() {
         dispatchUser({ type: "REMOVE__ADDRESS", payload: { address: address } });
-        setOrder({ ...order, orderAddress: "" })
-        toast.error(`address removed`);
+        setOrder({ ...order, orderAddress: "" });
+        toast.error(`Address Removed`);
     }
 
     return (
