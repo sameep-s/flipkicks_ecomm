@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../pages-css/props.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +12,7 @@ const CardProduct = (product) => {
 
     const { image, title, productName, price } = product;
 
-    const { state_Cart: { cart }, dispatch_Cart } = useCart()
+    const { state_Cart: { cart }, dispatch_Cart } = useCart();
     const { state_Wishlist: { wishlist }, dispatch_Wishlist } = useWishlist();
 
     const { user } = useAuth();

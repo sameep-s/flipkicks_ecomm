@@ -38,9 +38,9 @@ const Navbar = ({ search }) => {
                             <input
                                 className="input-dark"
                                 type="text"
-                                name="Search"
+                                name="Search "
                                 id="Search"
-                                placeholder="search"
+                                placeholder="Search 'Air Force' "
                                 onChange={(e) => searchProductsHandler(e)}
                             />
                         </div>

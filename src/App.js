@@ -12,16 +12,19 @@ import Signup from './pages/Signup';
 import { RequireAuth } from './components';
 import Checkout from './pages/Checkout/Checkout';
 import { Addresses, Orders, Profile } from './pages';
+import SingleProduct from './pages/singleProduct/SingleProduct';
 
 function App() {
   return (
     <BrowserRouter>
+
       <Routes  >
         <Route path="/" element={<Home />} />
         <Route path='/mock' element={<Mockman />} />
         <Route path='/products' element={<ProductList />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/singleProduct' element={<SingleProduct />} />
 
         {/* Private Routes */}
         <Route path='/cart' element={<RequireAuth><Cart /></RequireAuth>} />
@@ -30,8 +33,6 @@ function App() {
         <Route path='/profile' element={<RequireAuth> <Profile /> </RequireAuth>} />
         <Route path='/address' element={<RequireAuth> <Addresses /> </RequireAuth>} />
         <Route path='/orders' element={<RequireAuth> <Orders /> </RequireAuth>} />
-
-
       </Routes>
 
     </BrowserRouter>
